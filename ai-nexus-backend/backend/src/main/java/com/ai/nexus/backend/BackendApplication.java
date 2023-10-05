@@ -1,4 +1,4 @@
-package com.ai.nexus.backend.backend;
+package com.ai.nexus.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
