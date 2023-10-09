@@ -33,6 +33,10 @@ public class ToolCardService {
         return toolCardRepository.findToolNamesAndDescriptionsByCategoryName(categoryName);
     }
 
+    public ToolCard getToolCardsByToolName(String name) {
+        return toolCardRepository.findByToolName(name);
+    }
+
 
 //    public List<ToolCard> getToolsByCategory(String category) {
 //        ToolCardRepository
