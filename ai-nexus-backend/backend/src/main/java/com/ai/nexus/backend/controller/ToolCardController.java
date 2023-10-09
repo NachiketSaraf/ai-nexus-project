@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.tools.Tool;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -60,6 +61,14 @@ public class ToolCardController {
         }
 
         return ResponseEntity.ok(toolInfoList);
+    }
+
+    @GetMapping("/byname/{name}")
+    public ResponseEntity<ToolCard> getToolCardsByToolName(@PathVariable String name) {
+        ToolCard toolCards = toolCardService.getToolCardsByToolName(name);
+        return ResponseEntity.ok(toolCards);
+
+
     }
 }
 //    @GetMapping("/toolNamesByCategory/{categoryName}")
