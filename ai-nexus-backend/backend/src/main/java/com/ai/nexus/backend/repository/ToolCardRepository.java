@@ -13,6 +13,8 @@ import java.util.List;
 public interface ToolCardRepository extends JpaRepository<ToolCard, Integer> {
     List<ToolCard> findByCategory(Category category);
 
+//    @Query("SELECT t.toolName FROM ToolCard t WHERE t.toolName = :toolName")
+    ToolCard findByToolName(String toolName);
 
     @Query("SELECT t.toolName FROM ToolCard t WHERE t.category.categoryName = :categoryName")
     List<String> findToolNamesByCategoryName(@Param("categoryName") String categoryName);
