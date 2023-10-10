@@ -1,0 +1,20 @@
+.example-spacer{
+    flex:1 1 auto;
+}
+
+.custom-button {
+    background-color: transparent; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+  
+  .custom-button:hover {
+    background-color: transparent; 
+    color: bisque;
+    font-weight: bolder;
+  }
+  
