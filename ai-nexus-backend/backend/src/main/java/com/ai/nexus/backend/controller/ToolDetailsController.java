@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/ToolDetails")
+@CrossOrigin
 public class ToolDetailsController {
     @Autowired
     private  ToolDetailsService toolDetailsService;
