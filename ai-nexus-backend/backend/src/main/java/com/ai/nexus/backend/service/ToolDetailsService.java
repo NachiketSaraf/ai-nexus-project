@@ -18,34 +18,38 @@ public class ToolDetailsService {
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
     }
+    public ToolDetails getToolDetailsByName(String name) {
+        return toolDetailsRepository.findByToolName(name);
+    }
 
     public Optional<ToolDetails> getToolDetailById(Long id) {
         return toolDetailsRepository.findById(id);
     }
 
-    public ToolDetails createToolDetail(ToolDetails toolDetail) {
-        return toolDetailsRepository.save(toolDetail);
-    }
-
-    public ToolDetails updateToolDetail(Long id, ToolDetails updatedToolDetail) {
-        // Check if the tool detail with the given ID exists
-        if (toolDetailsRepository.existsById(id)) {
-            updatedToolDetail.setId(id);
-            return toolDetailsRepository.save(updatedToolDetail);
-        } else {
-            // Handle the case where the tool detail does not exist
-            throw new RuntimeException("Tool detail with ID " + id + " not found");
-        }
-    }
-
-    public void deleteToolDetail(Long id) {
-        // Check if the tool detail with the given ID exists before deleting
-        if (toolDetailsRepository.existsById(id)) {
-            toolDetailsRepository.deleteById(id);
-        } else {
-            // Handle the case where the tool detail does not exist
-            throw new RuntimeException("Tool detail with ID " + id + " not found");
-        }
-    }
+//
+//    public ToolDetails createToolDetail(ToolDetails toolDetail) {
+//        return toolDetailsRepository.save(toolDetail);
+//    }
+//
+//    public ToolDetails updateToolDetail(Long id, ToolDetails updatedToolDetail) {
+//        // Check if the tool detail with the given ID exists
+//        if (toolDetailsRepository.existsById(id)) {
+//            updatedToolDetail.setId(id);
+//            return toolDetailsRepository.save(updatedToolDetail);
+//        } else {
+//            // Handle the case where the tool detail does not exist
+//            throw new RuntimeException("Tool detail with ID " + id + " not found");
+//        }
+//    }
+//
+//    public void deleteToolDetail(Long id) {
+//        // Check if the tool detail with the given ID exists before deleting
+//        if (toolDetailsRepository.existsById(id)) {
+//            toolDetailsRepository.deleteById(id);
+//        } else {
+//            // Handle the case where the tool detail does not exist
+//            throw new RuntimeException("Tool detail with ID " + id + " not found");
+//        }
+//    }
 
 }
