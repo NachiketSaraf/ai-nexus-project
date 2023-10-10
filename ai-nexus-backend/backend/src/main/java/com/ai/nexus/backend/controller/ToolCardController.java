@@ -26,6 +26,7 @@ public class ToolCardController {
     public List<ToolCard> getAllToolName(){
         return toolCardService.getAllToolName();
     }
+
     @GetMapping("/byCategory/{categoryId}")
     public List<ToolCard> getToolsByCategoryId(@PathVariable int categoryId) {
         Category category = new Category();
