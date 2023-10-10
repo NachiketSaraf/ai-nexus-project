@@ -7,11 +7,9 @@ import com.ai.nexus.backend.service.ToolCardService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.tools.Tool;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,11 +17,15 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/tools")
+@CrossOrigin
 public class ToolCardController {
     @Autowired
     private ToolCardService toolCardService;
 
-
+    @GetMapping("/all-tool")
+    public List<ToolCard> getAllToolName(){
+        return toolCardService.getAllToolName();
+    }
     @GetMapping("/byCategory/{categoryId}")
     public List<ToolCard> getToolsByCategoryId(@PathVariable int categoryId) {
         Category category = new Category();
@@ -60,6 +62,14 @@ public class ToolCardController {
         }
 
         return ResponseEntity.ok(toolInfoList);
+    }
+
+    @GetMapping("/byname/{name}")
+    public ResponseEntity<ToolCard> getToolCardsByToolName(@PathVariable String name) {
+        ToolCard toolCards = toolCardService.getToolCardsByToolName(name);
+        return ResponseEntity.ok(toolCards);
+
+
     }
 }
 //    @GetMapping("/toolNamesByCategory/{categoryName}")

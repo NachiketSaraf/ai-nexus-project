@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AI Nexus.iml" filepath="$PROJECT_DIR$/.idea/AI Nexus.iml" />
       <module fileurl="file://$PROJECT_DIR$/ai-nexus-UI.iml" filepath="$PROJECT_DIR$/ai-nexus-UI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ai-nexus-backend/backend/backend.iml" filepath="$PROJECT_DIR$/ai-nexus-backend/backend/backend.iml" />
     </modules>
   </component>
 </project>

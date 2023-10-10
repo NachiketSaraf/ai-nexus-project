@@ -1,5 +1,6 @@
 package com.ai.nexus.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
@@ -31,4 +32,8 @@ public class ToolCard {
     @JoinColumn(name = "category_id", referencedColumnName = "category_id")
     private Category category;
 
+//
+//    @OneToOne(mappedBy = "toolCard", cascade = CascadeType.ALL, orphanRemoval = true)
+//    @JsonBackReference
+//    private ToolDetails toolDetails;
 }
