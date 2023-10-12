@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { AiToolsComponent } from './ai-tools/ai-tools.component';
 
 
 
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     NavbarComponent,
+    AiToolsComponent,
     
    
     
