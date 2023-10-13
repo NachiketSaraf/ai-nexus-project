@@ -1,15 +1,30 @@
 .example-spacer{
-    flex:1 1 auto;
+    margin-left: 35%;
 }
-
+.mat-toolbar{
+    //background-color: rgb(21, 142, 229);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2b4e6a; /* Adjust the background color as needed */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Adjust the padding as needed */
+    z-index: 100;}
+.name{
+    color: rgb(244, 239, 239);
+    margin-left: 5%;
+}
 .custom-button {
     background-color: transparent; 
-    color: #fff; 
+    // color: rgb(251, 249, 249); 
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    font-weight: bolder;
+    font-size: medium;
+    font-family: Georgia, serif;
+    
   }
   
   .custom-button:hover {
@@ -17,4 +32,6 @@
     color: bisque;
     font-weight: bolder;
   }
-  
+//   .search{
+//     flex:1 1 auto ;
+//   }
