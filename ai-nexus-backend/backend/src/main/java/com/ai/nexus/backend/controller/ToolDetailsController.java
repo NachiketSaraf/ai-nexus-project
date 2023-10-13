@@ -10,17 +10,22 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/ToolDetails")
+@CrossOrigin
 public class ToolDetailsController {
     @Autowired
     private  ToolDetailsService toolDetailsService;
 
 
-    @GetMapping
+    @GetMapping("/all")
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsService.getAllToolDetails();
     }
+    @GetMapping("/by-name/{name}")
+    public ToolDetails getToolDetailByName(@PathVariable String name) {
+        return toolDetailsService.getToolDetailsByName(name);
+    }
 
-    @GetMapping("/{id}")
+    @GetMapping("test/{id}")
     public ToolDetails getToolDetailsById(@PathVariable Long id) {
         Optional<ToolDetails> toolDetails = toolDetailsService.getToolDetailById(id);
         if (toolDetails.isPresent()) {
@@ -30,19 +35,19 @@ public class ToolDetailsController {
         }
     }
 
-    @PostMapping
-    public ToolDetails createToolDetails(@RequestBody ToolDetails toolDetails) {
-        return toolDetailsService.createToolDetail(toolDetails);
-    }
-
-    @PutMapping("/{id}")
-    public ToolDetails updateToolDetails(@PathVariable Long id, @RequestBody ToolDetails updatedToolDetails) {
-        return toolDetailsService.updateToolDetail(id, updatedToolDetails);
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteToolDetails(@PathVariable Long id) {
-        toolDetailsService.deleteToolDetail(id);
-    }
+//    @PostMapping
+//    public ToolDetails createToolDetails(@RequestBody ToolDetails toolDetails) {
+//        return toolDetailsService.createToolDetail(toolDetails);
+//    }
+//
+//    @PutMapping("/{id}")
+//    public ToolDetails updateToolDetails(@PathVariable Long id, @RequestBody ToolDetails updatedToolDetails) {
+//        return toolDetailsService.updateToolDetail(id, updatedToolDetails);
+//    }
+//
+//    @DeleteMapping("/{id}")
+//    public void deleteToolDetails(@PathVariable Long id) {
+//        toolDetailsService.deleteToolDetail(id);
+//    }
 
 }

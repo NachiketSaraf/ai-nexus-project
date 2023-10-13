@@ -37,8 +37,8 @@ public class ToolDetails {
 //    @JoinColumn(name = "tool_card_id")
 //    private ToolCard toolCard;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tool_card_id")
-    @JsonManagedReference
-    private ToolCard toolCard;
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "tool_card_id")
+//    @JsonManagedReference
+//    private ToolCard toolCard;
 }
