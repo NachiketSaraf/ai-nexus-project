@@ -27,7 +27,7 @@ import { HomeComponent } from './home/home.component';
     CategoryComponent,
     NavbarComponent,
     CardComponent,
-    AiToolsComponent
+    AiToolsComponent,
     HomeComponent
 
   ],
