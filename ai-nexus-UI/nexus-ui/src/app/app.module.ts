@@ -17,9 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 //import {MatIconModule} from '@angular/material/icon';
 
 
-
-import { HomeComponent } from './home/home.component';
-
+=======
+>>>>>>> 7f41df5b520686d065e29140432f73ce13358150
 
 @NgModule({
   declarations: [
@@ -34,13 +33,16 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
     // MatIconModule
+=======
     BrowserAnimationsModule
+>>>>>>> 7f41df5b520686d065e29140432f73ce13358150
   ],
   providers: [CategoryService, CardService],
   bootstrap: [AppComponent]
