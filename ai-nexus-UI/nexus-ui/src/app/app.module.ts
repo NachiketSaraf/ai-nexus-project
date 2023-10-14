@@ -14,7 +14,10 @@ import { CardService } from './service/card.service';
 import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { HomeComponent } from './home/home.component';
 import {MatIconModule} from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import {MatIconModule} from '@angular/material/icon';
     CategoryComponent,
     NavbarComponent,
     CardComponent,
-    AiToolsComponent
+    AiToolsComponent,
+    HomeComponent
 
   ],
   imports: [
@@ -34,10 +38,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    // MatIconModule
+     MatIconModule,
 
     BrowserAnimationsModule
-
   ],
   providers: [CategoryService, CardService],
   bootstrap: [AppComponent]

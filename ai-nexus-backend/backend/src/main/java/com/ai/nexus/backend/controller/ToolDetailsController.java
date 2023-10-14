@@ -13,13 +13,14 @@ import java.util.Optional;
 @CrossOrigin
 public class ToolDetailsController {
     @Autowired
-    private  ToolDetailsService toolDetailsService;
+    private ToolDetailsService toolDetailsService;
 
 
     @GetMapping("/all")
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsService.getAllToolDetails();
     }
+
     @GetMapping("/by-name/{name}")
     public ToolDetails getToolDetailByName(@PathVariable String name) {
         return toolDetailsService.getToolDetailsByName(name);
