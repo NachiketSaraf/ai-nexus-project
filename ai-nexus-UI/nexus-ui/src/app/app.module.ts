@@ -14,11 +14,7 @@ import { CardService } from './service/card.service';
 import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-//import {MatIconModule} from '@angular/material/icon';
-
-
-=======
->>>>>>> 7f41df5b520686d065e29140432f73ce13358150
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -33,16 +29,16 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
+
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
     // MatIconModule
-=======
+
     BrowserAnimationsModule
->>>>>>> 7f41df5b520686d065e29140432f73ce13358150
+
   ],
   providers: [CategoryService, CardService],
   bootstrap: [AppComponent]
