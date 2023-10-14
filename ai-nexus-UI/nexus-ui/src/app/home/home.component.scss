@@ -1,0 +1,56 @@
+
+.name{
+    margin-top: 70px;
+    font-size: xx-large;
+}
+.card {
+
+
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+  .card-header {
+    background-color: #640257;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    width: 500%;
+    font-size: large;
+    display: inline-block;
+    overflow: hidden;
+    
+   }
+  .card-body {
+    padding: 15px;
+  }
+  .card-body img{
+    height: 200px;
+    max-width: fit-content;
+    border-radius: none;
+  }
+  .card-header1 {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* component-name.component.css */
+
+.custom-button {
+  background-color: #40025b; /* Background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Hover effect */
+.custom-button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
