@@ -17,6 +17,8 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+
+    // To get all categories as List<String>
     @GetMapping("/all")
     public List<String> getAllCategories() {
         return categoryService.getAllCategoriesNameOnly();
