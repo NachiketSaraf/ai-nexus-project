@@ -15,14 +15,12 @@ import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
-
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
 import { FullToolPageComponent } from './full-tool-page/full-tool-page.component';
 import { FullToolPageService } from './service/full-tool-page.service';
 //import {MatIconModule} from '@angular/material/icon';
-
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -49,6 +47,8 @@ import { FullToolPageService } from './service/full-tool-page.service';
     MatCardModule,
     // MatIconModule
     BrowserAnimationsModule
+
+
   ],
   providers: [CategoryService, CardService,FullToolPageService],
   bootstrap: [AppComponent]
