@@ -24,7 +24,6 @@ import { RecommendedComponent } from './recommended/recommended.component';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,20 +40,13 @@ import { RecommendedComponent } from './recommended/recommended.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    //MatIconModule
-
-
+    // MatIconModule
     BrowserAnimationsModule
-
-  
-
-
   ],
   providers: [CategoryService, CardService],
   bootstrap: [AppComponent]
