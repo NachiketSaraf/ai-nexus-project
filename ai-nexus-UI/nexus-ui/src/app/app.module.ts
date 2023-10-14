@@ -15,15 +15,16 @@ import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+
 import { HomeComponent } from './home/home.component';
 
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
+import { FullToolPageComponent } from './full-tool-page/full-tool-page.component';
+import { FullToolPageService } from './service/full-tool-page.service';
 //import {MatIconModule} from '@angular/material/icon';
 
 
-=======
->>>>>>> 7f41df5b520686d065e29140432f73ce13358150
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { RecommendedComponent } from './recommended/recommended.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
+
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -51,8 +52,9 @@ import { RecommendedComponent } from './recommended/recommended.component';
     MatCardModule,
 
     // MatIconModule
-=======
+
     BrowserAnimationsModule
+
   ],
   providers: [CategoryService, CardService,FullToolPageService],
   bootstrap: [AppComponent]
