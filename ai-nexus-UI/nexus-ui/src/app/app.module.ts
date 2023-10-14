@@ -42,15 +42,13 @@ import { FullToolPageService } from './service/full-tool-page.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
     // MatIconModule
-  BrowserAnimationsModule
-
+    BrowserAnimationsModule
   ],
   providers: [CategoryService, CardService,FullToolPageService],
   bootstrap: [AppComponent]
