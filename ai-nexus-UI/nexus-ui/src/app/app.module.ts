@@ -19,8 +19,11 @@ import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
 import { FullToolPageComponent } from './full-tool-page/full-tool-page.component';
 import { FullToolPageService } from './service/full-tool-page.service';
-//import {MatIconModule} from '@angular/material/icon';
-import {MatIconModule} from '@angular/material/icon';
+
+
+
+
+
 
 
 @NgModule({
@@ -45,7 +48,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    // MatIconModule
+  //MatIconModule
+
+
     BrowserAnimationsModule
 
 
