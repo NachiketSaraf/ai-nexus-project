@@ -49,7 +49,7 @@ public class ToolCardController {
         return ResponseEntity.ok(toolNames);
     }
 
-
+    // get tool card by category name
     @GetMapping("/nameAndDescription/{categoryName}")
     public ResponseEntity<List<Map<String, String>>> getToolNamesAndDescriptionsByCategoryName(@PathVariable String categoryName) {
         List<Object[]> results = toolCardService.getToolNamesAndDescriptionsByCategoryName(categoryName);
