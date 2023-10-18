@@ -28,12 +28,15 @@ public class ToolCardController {
         return toolCardService.getAllToolName();
     }
 
+    // get tool card by category id
     @GetMapping("/byCategory/{categoryId}")
     public List<ToolCard> getToolsByCategoryId(@PathVariable int categoryId) {
         Category category = new Category();
         category.setCategoryId(categoryId);
         return toolCardService.getToolsByCategoryId(category);
     }
+
+    // get tool name by category name
 
     @GetMapping("/toolNamesByCategory/{categoryName}")
     public ResponseEntity<List<String>> getToolNamesByCategoryName(@PathVariable String categoryName) {
