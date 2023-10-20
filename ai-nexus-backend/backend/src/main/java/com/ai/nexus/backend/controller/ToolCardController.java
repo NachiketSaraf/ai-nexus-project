@@ -36,7 +36,7 @@ public class ToolCardController {
         return toolCardService.getToolsByCategoryId(category);
     }
 
-
+    // get tool name by category name
 
     @GetMapping("/toolNamesByCategory/{categoryName}")
     public ResponseEntity<List<String>> getToolNamesByCategoryName(@PathVariable String categoryName) {
