@@ -1,20 +1,11 @@
 package com.ai.nexus.backend.service;
 
-
 import com.ai.nexus.backend.model.Category;
 import com.ai.nexus.backend.model.ToolCard;
 import com.ai.nexus.backend.repository.ToolCardRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Hashtable;
 import java.util.List;
-import java.util.stream.Collectors;
-
 
 @Service
 public class ToolCardService {
