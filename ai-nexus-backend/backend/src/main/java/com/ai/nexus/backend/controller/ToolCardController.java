@@ -22,17 +22,21 @@ public class ToolCardController {
     @Autowired
     private ToolCardService toolCardService;
 
+    // list of all tool
     @GetMapping("/all-tool")
     public List<ToolCard> getAllToolName(){
         return toolCardService.getAllToolName();
     }
 
+    // get tool card by category id
     @GetMapping("/byCategory/{categoryId}")
     public List<ToolCard> getToolsByCategoryId(@PathVariable int categoryId) {
         Category category = new Category();
         category.setCategoryId(categoryId);
         return toolCardService.getToolsByCategoryId(category);
     }
+
+
 
     @GetMapping("/toolNamesByCategory/{categoryName}")
     public ResponseEntity<List<String>> getToolNamesByCategoryName(@PathVariable String categoryName) {
@@ -45,7 +49,7 @@ public class ToolCardController {
         return ResponseEntity.ok(toolNames);
     }
 
-
+    // get tool card by category name
     @GetMapping("/nameAndDescription/{categoryName}")
     public ResponseEntity<List<Map<String, String>>> getToolNamesAndDescriptionsByCategoryName(@PathVariable String categoryName) {
         List<Object[]> results = toolCardService.getToolNamesAndDescriptionsByCategoryName(categoryName);
