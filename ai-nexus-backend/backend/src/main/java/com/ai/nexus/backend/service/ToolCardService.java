@@ -4,9 +4,7 @@ package com.ai.nexus.backend.service;
 import com.ai.nexus.backend.model.Category;
 import com.ai.nexus.backend.model.ToolCard;
 import com.ai.nexus.backend.repository.ToolCardRepository;
-import com.ai.nexus.backend.utils.SimpleCardUtils;
 
-import com.ai.nexus.backend.utils.CategoryButtonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
