@@ -23,4 +23,5 @@ public class CategoryController {
     public List<String> getAllCategories() {
         return categoryService.getAllCategoriesNameOnly();
     }
+
 }
