@@ -27,7 +27,8 @@ public class ToolDetailsController {
 
     // Get list of all details
 
-    @GetMapping("/All")
+    @GetMapping("/all")
+
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsService.getAllToolDetails();
     }
