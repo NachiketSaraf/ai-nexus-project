@@ -22,7 +22,6 @@ public class ToolDetailsController {
     @Autowired
     private ToolDetailsService toolDetailsService;
 
-    // Get list of all details
 
     @GetMapping("/all")
 
