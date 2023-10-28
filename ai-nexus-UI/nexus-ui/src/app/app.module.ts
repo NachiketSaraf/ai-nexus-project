@@ -14,11 +14,10 @@ import { CardService } from './service/card.service';
 import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { HomeComponent } from './home/home.component';
 //import {MatIconModule} from '@angular/material/icon';
 
 
-
-import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -34,13 +33,15 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
     // MatIconModule
-    BrowserAnimationsModule
+  BrowserAnimationsModule
+
   ],
   providers: [CategoryService, CardService],
   bootstrap: [AppComponent]
