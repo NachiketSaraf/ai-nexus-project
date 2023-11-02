@@ -9,11 +9,6 @@ import com.ai.nexus.backend.service.ToolDetailsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
-=======
-import org.springframework.data.crossstore.ChangeSetPersister;
-import org.springframework.http.ResponseEntity;
->>>>>>> c9b064d (discarded tool card)
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,16 +33,8 @@ public class ToolDetailsController {
     public ToolDetails getToolDetailByName(@PathVariable String name) {
         return toolDetailsService.getToolDetailsByName(name);
     }
-    @Operation(summary = "To get tool for \" trending \" and \"recommended\" "
-            ,description = "For every API call will return a list of all unique tools no single tool will be repeated in one call"+
-            "<h3> API input are: </h3> "
-            + "<ul><li>To get 3 tools for trending : <b>trending</b></li>"
-            + "<li>To get 3 tools for recommended : <b>recommended</b></li></ul>")
-    @GetMapping("by-tag/{toolTag}")
-    public List<ToolDetails> getToolByTag(@PathVariable String toolTag){
-        return toolDetailsService.getToolByTag(toolTag);
-    }
-    @GetMapping("by-id/{id}")
+
+    @GetMapping("test/{id}")
     public ToolDetails getToolDetailsById(@PathVariable Long id) {
         Optional<ToolDetails> toolDetails = toolDetailsService.getToolDetailById(id);
         if (toolDetails.isPresent()) {
@@ -56,6 +43,24 @@ public class ToolDetailsController {
             throw new RuntimeException("Tool detail with ID " + id + " not found");
         }
     }
+
+    @GetMapping("/byCategory/{categoryName}")
+    public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
+        List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
+        return ResponseEntity.ok(toolDetails);
+    }
+    @PostMapping("/insert")
+    public ToolDetails insertToolDetails(@RequestBody ToolDetails toolDetails) {
+        return toolDetailsService.insertToolDetails(toolDetails);
+    }
+
+    @PatchMapping("/{toolId}")
+    public ResponseEntity<ToolDetails> updateToolDetails(@PathVariable Long toolId, @RequestBody ToolDetails updatedToolDetails) {
+        ToolDetails updatedTool = toolDetailsService.updateToolDetails(toolId, updatedToolDetails);
+        return ResponseEntity.ok(updatedTool);
+    }
+
+}
 
     @GetMapping("/byCategory/{categoryName}")
     public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
