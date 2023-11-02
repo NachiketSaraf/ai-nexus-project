@@ -33,6 +33,7 @@ public class ToolDetails {
     @Column(name = "tool_demo_video_links", columnDefinition = "text")
     private String toolDemoVideoLinks;
 
+<<<<<<< HEAD
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
@@ -81,6 +82,8 @@ public class ToolDetails {
 //    @Column(name = "tool_demo_video_links", columnDefinition = "text")
 //    private String toolDemoVideoLinks;
 
+=======
+>>>>>>> 07de33c (discarded tool card)
 //    @OneToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "tool_card_id")
 //    private ToolCard toolCard;
