@@ -29,6 +29,7 @@ public class ToolDetailsService {
     private  ToolDetailsRepository toolDetailsRepository;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     @Autowired
     private CategoryRepository categoryRepository;
@@ -75,6 +76,8 @@ public class ToolDetailsService {
     }
 
 >>>>>>> 758d6d9 (discarded tool card)
+=======
+>>>>>>> a1205b5 (discarded tool card)
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
