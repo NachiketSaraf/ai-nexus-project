@@ -34,7 +34,11 @@ public class ToolDetailsController {
         return toolDetailsService.getToolDetailsByName(name);
     }
 
+<<<<<<< HEAD
     @GetMapping("by-id/{id}")
+=======
+    @GetMapping("test/{id}")
+>>>>>>> 45cbfe9 (discarded tool card)
     public ToolDetails getToolDetailsById(@PathVariable Long id) {
         Optional<ToolDetails> toolDetails = toolDetailsService.getToolDetailById(id);
         if (toolDetails.isPresent()) {
@@ -75,6 +79,24 @@ public class ToolDetailsController {
 =======
 =======
 >>>>>>> 138c711 (updated to get all card)
+    @GetMapping("/byCategory/{categoryName}")
+    public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
+        List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
+        return ResponseEntity.ok(toolDetails);
+    }
+    @PostMapping("/insert")
+    public ToolDetails insertToolDetails(@RequestBody ToolDetails toolDetails) {
+        return toolDetailsService.insertToolDetails(toolDetails);
+    }
+
+    @PatchMapping("/{toolId}")
+    public ResponseEntity<ToolDetails> updateToolDetails(@PathVariable Long toolId, @RequestBody ToolDetails updatedToolDetails) {
+        ToolDetails updatedTool = toolDetailsService.updateToolDetails(toolId, updatedToolDetails);
+        return ResponseEntity.ok(updatedTool);
+    }
+
+}
+
     @GetMapping("/byCategory/{categoryName}")
     public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
         List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
