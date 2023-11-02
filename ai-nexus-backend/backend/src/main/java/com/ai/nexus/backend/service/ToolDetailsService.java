@@ -38,6 +38,7 @@ public class ToolDetailsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 57b28d6 (discarded tool card)
 =======
@@ -117,6 +118,8 @@ public class ToolDetailsService {
 
 >>>>>>> c9b064d (discarded tool card)
 >>>>>>> 57b28d6 (discarded tool card)
+=======
+>>>>>>> 8128aaf (discarded tool card)
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
@@ -132,6 +135,7 @@ public class ToolDetailsService {
         return toolDetailsRepository.findById(id);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         // Update all fields
@@ -175,6 +179,8 @@ public class ToolDetailsService {
 //        return toolDetailsRepository.save(toolDetails);
 //    }
 >>>>>>> e8fed01 (New api to get tools with trending and recommended)
+=======
+>>>>>>> 8128aaf (discarded tool card)
 //
 //    public ToolDetails createToolDetail(ToolDetails toolDetail) {
 //        return toolDetailsRepository.save(toolDetail);
