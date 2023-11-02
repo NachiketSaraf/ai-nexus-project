@@ -47,6 +47,7 @@ public class ToolDetailsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 57b28d6 (discarded tool card)
 =======
@@ -163,6 +164,8 @@ public class ToolDetailsService {
 
 >>>>>>> 130f04f (discarded tool card)
 >>>>>>> 617cd0a (discarded tool card)
+=======
+>>>>>>> 52caf26 (discarded tool card)
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
@@ -177,10 +180,16 @@ public class ToolDetailsService {
     public Optional<ToolDetails> getToolDetailById(Long id) {
         return toolDetailsRepository.findById(id);
     }
+    public ToolDetails updateToolDetails(Long toolId, ToolDetails updatedToolDetails) {
+        ToolDetails existingTool = toolDetailsRepository.findById(toolId)
+                .orElseThrow(() -> new ResourceNotFoundException("Tool not found with id: " + toolId));
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 52caf26 (discarded tool card)
         // Update all fields
         existingTool.setToolName(updatedToolDetails.getToolName());
         existingTool.setToolImage(updatedToolDetails.getToolImage());
@@ -192,6 +201,7 @@ public class ToolDetailsService {
 
         return toolDetailsRepository.save(existingTool);
     }
+<<<<<<< HEAD
 
     public List<ToolDetails> getToolByTag(String toolTag) {
         List<ToolDetails> existingTool =  toolDetailsRepository.findByToolTag(toolTag);
@@ -213,6 +223,8 @@ public class ToolDetailsService {
         List<ToolDetails> ans = selectedTool.stream().toList();
         return  ans;
     }
+=======
+>>>>>>> 52caf26 (discarded tool card)
 //
 //    public Category findCategoryByName(String categoryName) {
 //        return categoryRepository.findByCategoryName(categoryName);
@@ -221,9 +233,12 @@ public class ToolDetailsService {
 //    public ToolDetails saveToolDetails(ToolDetails toolDetails) {
 //        return toolDetailsRepository.save(toolDetails);
 //    }
+<<<<<<< HEAD
 >>>>>>> e8fed01 (New api to get tools with trending and recommended)
 =======
 >>>>>>> 8128aaf (discarded tool card)
+=======
+>>>>>>> 52caf26 (discarded tool card)
 //
 //    public ToolDetails createToolDetail(ToolDetails toolDetail) {
 //        return toolDetailsRepository.save(toolDetail);
