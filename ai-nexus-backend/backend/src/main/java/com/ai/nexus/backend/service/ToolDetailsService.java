@@ -21,50 +21,6 @@ public class ToolDetailsService {
     @Autowired
     private  ToolDetailsRepository toolDetailsRepository;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
-    @Transactional
-    public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
-        List<ToolDetails> savedToolDetails = new ArrayList<>();
-
-        for (ToolDetails toolDetails : toolDetailsList) {
-            String categoryName = toolDetails.getCategory().getCategoryName();
-
-            // Check if the category with the specified name exists in the database
-            Category category = categoryRepository.findByCategoryName(categoryName);
-
-            // If the category doesn't exist, create a new one
-            if (category == null) {
-                category = new Category();
-                category.setCategoryName(categoryName);
-                categoryRepository.save(category);
-            }
-
-            toolDetails.setCategory(category);
-            savedToolDetails.add(toolDetailsRepository.save(toolDetails));
-        }
-
-        return savedToolDetails;
-    }
-    public List<ToolDetails> updateToolImages(List<Map<String, String>> toolUpdates) {
-        List<ToolDetails> updatedTools = new ArrayList<>();
-
-        for (Map<String, String> toolUpdate : toolUpdates) {
-            String toolName = toolUpdate.get("toolName");
-            String toolImage = toolUpdate.get("toolImage");
-
-            if (toolName != null && toolImage != null) {
-                ToolDetails tool = toolDetailsRepository.findByToolName(toolName);
-                if (tool != null) {
-                    tool.setToolImage(toolImage);
-                    updatedTools.add(toolDetailsRepository.save(tool));
-                }
-            }
-        }
-
-        return updatedTools;
-    }
-
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
