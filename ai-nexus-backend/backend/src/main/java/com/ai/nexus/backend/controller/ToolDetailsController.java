@@ -9,6 +9,7 @@ import com.ai.nexus.backend.service.ToolDetailsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,6 +52,8 @@ public class ToolDetailsController {
         List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
         return ResponseEntity.ok(toolDetails);
     }
+
+
     @PostMapping("/insert")
     public List<ToolDetails> insertToolDetails(@RequestBody List<ToolDetails> toolDetailsList) {
         return toolDetailsService.insertToolDetails(toolDetailsList);
@@ -58,15 +61,10 @@ public class ToolDetailsController {
 
     //update tool image url
     @PatchMapping("/update-tool-images")
-    public ResponseEntity<String> updateToolImages(@RequestBody List<Map<String, String>> toolUpdates) {
-        String successMessage = toolDetailsService.updateToolImages(toolUpdates);
-        if (successMessage != null) {
-            return ResponseEntity.ok(successMessage);
-        } else {
-            return ResponseEntity.badRequest().body("Failed to update tool images");
-        }
+    public ResponseEntity<List<ToolDetails>> updateToolImages(@RequestBody List<Map<String, String>> toolUpdates) {
+        List<ToolDetails> updatedTools = toolDetailsService.updateToolImages(toolUpdates);
+        return ResponseEntity.ok(updatedTools);
     }
-
     @PatchMapping("/{toolId}")
     public ResponseEntity<ToolDetails> updateToolDetails(@PathVariable Long toolId, @RequestBody ToolDetails updatedToolDetails) {
         ToolDetails updatedTool = toolDetailsService.updateToolDetails(toolId, updatedToolDetails);
