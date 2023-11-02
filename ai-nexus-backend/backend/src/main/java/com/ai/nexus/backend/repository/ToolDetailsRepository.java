@@ -6,8 +6,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface ToolDetailsRepository extends JpaRepository<ToolDetails, Long> {
     ToolDetails findByToolName(String toolName);
     // Define custom query methods if needed
+    List<ToolDetails> findByCategory_CategoryName(String categoryName);
+
 }
