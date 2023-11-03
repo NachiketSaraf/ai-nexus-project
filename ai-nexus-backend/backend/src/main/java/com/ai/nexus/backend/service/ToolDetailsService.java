@@ -12,8 +12,11 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617cd0a (discarded tool card)
+=======
+>>>>>>> 4823e7a (discarded tool card)
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +24,10 @@ import java.util.*;
 =======
 import org.springframework.stereotype.Service;
 
+=======
+import org.springframework.stereotype.Service;
+
+>>>>>>> c9b064d (discarded tool card)
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -48,19 +55,26 @@ public class ToolDetailsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 57b28d6 (discarded tool card)
 =======
 >>>>>>> 617cd0a (discarded tool card)
 =======
+>>>>>>> 4823e7a (discarded tool card)
+=======
     @Autowired
     private CategoryRepository categoryRepository;
     @Transactional
+<<<<<<< HEAD
 <<<<<<< HEAD
     public List<ToolDetails> createToolDetails(List<ToolDetails> toolDetailsList) {
 =======
     public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
 >>>>>>> 617cd0a (discarded tool card)
+=======
+    public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
+>>>>>>> 4823e7a (discarded tool card)
         List<ToolDetails> savedToolDetails = new ArrayList<>();
 
         for (ToolDetails toolDetails : toolDetailsList) {
@@ -86,6 +100,7 @@ public class ToolDetailsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public List<ToolDetails> updateToolImages(List<Map<String, String>> toolUpdates) {
         List<ToolDetails> updatedTools = new ArrayList<>();
 
@@ -107,6 +122,10 @@ public class ToolDetailsService {
         List<ToolDetails> updatedTools = new ArrayList<>();
 
 >>>>>>> 8f71bd5 (discarded tool card)
+=======
+
+    public String updateToolImages(List<Map<String, String>> toolUpdates) {
+>>>>>>> 4823e7a (discarded tool card)
         for (Map<String, String> toolUpdate : toolUpdates) {
             String toolName = toolUpdate.get("toolName");
             String toolImage = toolUpdate.get("toolImage");
@@ -115,6 +134,7 @@ public class ToolDetailsService {
                 ToolDetails tool = toolDetailsRepository.findByToolName(toolName);
                 if (tool != null) {
                     tool.setToolImage(toolImage);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +186,20 @@ public class ToolDetailsService {
 >>>>>>> 617cd0a (discarded tool card)
 =======
 >>>>>>> 52caf26 (discarded tool card)
+=======
+                    toolDetailsRepository.save(tool);
+                } else {
+                    return "Tool with name '" + toolName + "' not found.";
+                }
+            } else {
+                return "ToolName and ToolImage are required for each update.";
+            }
+        }
+        return "Tool images updated successfully";
+    }
+
+>>>>>>> c9b064d (discarded tool card)
+>>>>>>> 4823e7a (discarded tool card)
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
