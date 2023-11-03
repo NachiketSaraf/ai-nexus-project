@@ -33,6 +33,47 @@ public class ToolDetails {
     @Column(name = "tool_demo_video_links", columnDefinition = "text")
     private String toolDemoVideoLinks;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
+    @Column(name = "tool_description", columnDefinition = "text")
+    private String toolDescription;
+}
+
+
+
+
+
+
+
+
+
+
+
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id")
+//    private Long id;
+//
+//    @Column(name = "tool_name")
+//    private String toolName;
+//
+//    @Column(name = "tool_image")
+//    private String toolImage;
+//
+//    @Column(name = "tool_description")
+//    private String description;
+//
+//    @Column(name = "tool_features", columnDefinition = "text")
+//    private String toolFeatures;
+//
+//    @Column(name = "tool_website_link")
+//    private String toolWebsiteLink;
+//
+//    @Column(name = "tool_demo_video_links", columnDefinition = "text")
+//    private String toolDemoVideoLinks;
+
 //    @OneToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "tool_card_id")
 //    private ToolCard toolCard;
@@ -41,4 +82,4 @@ public class ToolDetails {
 //    @JoinColumn(name = "tool_card_id")
 //    @JsonManagedReference
 //    private ToolCard toolCard;
-}
+
