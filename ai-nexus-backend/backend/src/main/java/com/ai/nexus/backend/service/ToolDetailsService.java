@@ -55,8 +55,9 @@ public class ToolDetailsService {
 
         return savedToolDetails;
     }
+    public List<ToolDetails> updateToolImages(List<Map<String, String>> toolUpdates) {
+        List<ToolDetails> updatedTools = new ArrayList<>();
 
-    public String updateToolImages(List<Map<String, String>> toolUpdates) {
         for (Map<String, String> toolUpdate : toolUpdates) {
             String toolName = toolUpdate.get("toolName");
             String toolImage = toolUpdate.get("toolImage");
@@ -65,15 +66,12 @@ public class ToolDetailsService {
                 ToolDetails tool = toolDetailsRepository.findByToolName(toolName);
                 if (tool != null) {
                     tool.setToolImage(toolImage);
-                    toolDetailsRepository.save(tool);
-                } else {
-                    return "Tool with name '" + toolName + "' not found.";
+                    updatedTools.add(toolDetailsRepository.save(tool));
                 }
-            } else {
-                return "ToolName and ToolImage are required for each update.";
             }
         }
-        return "Tool images updated successfully";
+
+        return updatedTools;
     }
 
 >>>>>>> 758d6d9 (discarded tool card)
