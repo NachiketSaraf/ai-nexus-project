@@ -1,0 +1,39 @@
+.category-box {
+    margin-top: 20px;
+    display: inline-flex;
+    /* Display buttons in a row */
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-left: 30px;
+
+    justify-content: center;
+    /* Center-align buttons horizontally */
+    gap: 20px;
+    /* Add space between buttons */
+}
+
+.category-box button {
+    background-color: #2f1302;
+    /* Button background color */
+    color: #fff;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding around text */
+    border: none;
+    /* Remove button border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.category-box button:hover {
+    background-color: #5f8829;
+    /* Hover background color */
+
+}
+
+.name {
+    margin-top: 70px;
+    font-size: xx-large;
+}
