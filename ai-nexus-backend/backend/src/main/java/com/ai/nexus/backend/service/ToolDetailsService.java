@@ -9,16 +9,74 @@ import jakarta.transaction.Transactional;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
+<<<<<<< HEAD
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+=======
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+>>>>>>> 130f04f (discarded tool card)
 
 @Service
 public class ToolDetailsService {
     @Autowired
     private  ToolDetailsRepository toolDetailsRepository;
 
+<<<<<<< HEAD
+=======
+    @Autowired
+    private CategoryRepository categoryRepository;
+    @Transactional
+    public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
+        List<ToolDetails> savedToolDetails = new ArrayList<>();
+
+        for (ToolDetails toolDetails : toolDetailsList) {
+            String categoryName = toolDetails.getCategory().getCategoryName();
+
+            // Check if the category with the specified name exists in the database
+            Category category = categoryRepository.findByCategoryName(categoryName);
+
+            // If the category doesn't exist, create a new one
+            if (category == null) {
+                category = new Category();
+                category.setCategoryName(categoryName);
+                categoryRepository.save(category);
+            }
+
+            toolDetails.setCategory(category);
+            savedToolDetails.add(toolDetailsRepository.save(toolDetails));
+        }
+
+        return savedToolDetails;
+    }
+
+    public String updateToolImages(List<Map<String, String>> toolUpdates) {
+        for (Map<String, String> toolUpdate : toolUpdates) {
+            String toolName = toolUpdate.get("toolName");
+            String toolImage = toolUpdate.get("toolImage");
+
+            if (toolName != null && toolImage != null) {
+                ToolDetails tool = toolDetailsRepository.findByToolName(toolName);
+                if (tool != null) {
+                    tool.setToolImage(toolImage);
+                    toolDetailsRepository.save(tool);
+                } else {
+                    return "Tool with name '" + toolName + "' not found.";
+                }
+            } else {
+                return "ToolName and ToolImage are required for each update.";
+            }
+        }
+        return "Tool images updated successfully";
+    }
+
+>>>>>>> 130f04f (discarded tool card)
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
