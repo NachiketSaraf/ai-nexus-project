@@ -45,8 +45,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 57b28d6 (discarded tool card)
+=======
+>>>>>>> 617cd0a (discarded tool card)
 =======
         <dependency>
             <groupId>org.apache.velocity</groupId>
@@ -63,6 +66,7 @@
 			<artifactId>jakarta.xml.bind-api</artifactId>
 			<version>4.0.1</version>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -79,6 +83,10 @@
 >>>>>>> 57b28d6 (discarded tool card)
 =======
 >>>>>>> cbf2926 (discarded tool card)
+=======
+
+>>>>>>> 130f04f (discarded tool card)
+>>>>>>> 617cd0a (discarded tool card)
 	</dependencies>
 
 	<build>

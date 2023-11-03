@@ -11,6 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617cd0a (discarded tool card)
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+<<<<<<< HEAD
 >>>>>>> 758d6d9 (discarded tool card)
 =======
 import org.springframework.http.ResponseEntity;
@@ -29,6 +33,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 >>>>>>> e8fed01 (New api to get tools with trending and recommended)
+=======
+>>>>>>> 130f04f (discarded tool card)
+>>>>>>> 617cd0a (discarded tool card)
 
 @Service
 public class ToolDetailsService {
@@ -39,13 +46,20 @@ public class ToolDetailsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 57b28d6 (discarded tool card)
+=======
+>>>>>>> 617cd0a (discarded tool card)
 =======
     @Autowired
     private CategoryRepository categoryRepository;
     @Transactional
+<<<<<<< HEAD
     public List<ToolDetails> createToolDetails(List<ToolDetails> toolDetailsList) {
+=======
+    public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
+>>>>>>> 617cd0a (discarded tool card)
         List<ToolDetails> savedToolDetails = new ArrayList<>();
 
         for (ToolDetails toolDetails : toolDetailsList) {
@@ -69,6 +83,7 @@ public class ToolDetailsService {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public List<ToolDetails> updateToolImages(List<Map<String, String>> toolUpdates) {
         List<ToolDetails> updatedTools = new ArrayList<>();
 
@@ -81,6 +96,10 @@ public class ToolDetailsService {
         List<ToolDetails> updatedTools = new ArrayList<>();
 
 >>>>>>> b897d30 (discarded tool card)
+=======
+
+    public String updateToolImages(List<Map<String, String>> toolUpdates) {
+>>>>>>> 617cd0a (discarded tool card)
         for (Map<String, String> toolUpdate : toolUpdates) {
             String toolName = toolUpdate.get("toolName");
             String toolImage = toolUpdate.get("toolImage");
@@ -89,6 +108,7 @@ public class ToolDetailsService {
                 ToolDetails tool = toolDetailsRepository.findByToolName(toolName);
                 if (tool != null) {
                     tool.setToolImage(toolImage);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     updatedTools.add(toolDetailsRepository.save(tool));
@@ -120,6 +140,20 @@ public class ToolDetailsService {
 >>>>>>> 57b28d6 (discarded tool card)
 =======
 >>>>>>> 8128aaf (discarded tool card)
+=======
+                    toolDetailsRepository.save(tool);
+                } else {
+                    return "Tool with name '" + toolName + "' not found.";
+                }
+            } else {
+                return "ToolName and ToolImage are required for each update.";
+            }
+        }
+        return "Tool images updated successfully";
+    }
+
+>>>>>>> 130f04f (discarded tool card)
+>>>>>>> 617cd0a (discarded tool card)
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
