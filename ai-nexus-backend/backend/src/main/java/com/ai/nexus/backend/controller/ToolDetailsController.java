@@ -53,8 +53,19 @@ public class ToolDetailsController {
         return ResponseEntity.ok(toolDetails);
     }
     @PostMapping("/insert")
-    public ToolDetails insertToolDetails(@RequestBody ToolDetails toolDetails) {
-        return toolDetailsService.insertToolDetails(toolDetails);
+    public List<ToolDetails> insertToolDetails(@RequestBody List<ToolDetails> toolDetailsList) {
+        return toolDetailsService.insertToolDetails(toolDetailsList);
+    }
+
+    //update tool image url
+    @PatchMapping("/update-tool-images")
+    public ResponseEntity<String> updateToolImages(@RequestBody List<Map<String, String>> toolUpdates) {
+        String successMessage = toolDetailsService.updateToolImages(toolUpdates);
+        if (successMessage != null) {
+            return ResponseEntity.ok(successMessage);
+        } else {
+            return ResponseEntity.badRequest().body("Failed to update tool images");
+        }
     }
 
     @PatchMapping("/{toolId}")
