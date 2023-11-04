@@ -15,12 +15,12 @@ export class CardService {
   
   
     getCard(categoryName :string ): Observable<string[]>{
-      return this.http.get(`${this.baseUrl}/tools/nameAndDescription/${categoryName}`) .pipe(
-        map((response: any) => response as string[]));
+      const url = `${this.baseUrl}/tools/nameAndDescription/${categoryName}`;
+      return this.http.get<string[]>(url) ;
     }
    
 }
-// .pipe(): The .pipe() method is commonly used in functional programming and is often associated with libraries like RxJS for handling asynchronous operations. It allows you to create a chain of data processing steps.
+// .pipe(): The .pipe() method is commonly used in functional programming and is often associated with libraries like RxJS for handling asynchronous operations. It allows you to create a chain of data processing steps.hope so be sile
 
 // map(): The map() function is used to transform the data within the data stream. In this context, it's being used as a method applied to a stream of data. It takes a function as an argument, and for each item in the data stream, it applies this function to transform the item.
 
