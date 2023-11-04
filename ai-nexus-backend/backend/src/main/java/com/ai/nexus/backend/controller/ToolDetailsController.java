@@ -5,6 +5,8 @@ import com.ai.nexus.backend.model.ToolDetails;
 import com.ai.nexus.backend.repository.CategoryRepository;
 import com.ai.nexus.backend.repository.ToolDetailsRepository;
 import com.ai.nexus.backend.service.ToolDetailsService;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 <<<<<<< HEAD
 =======
@@ -18,8 +20,9 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/ToolDetails")
+@RequestMapping("/api/tool-details")
 @CrossOrigin
+@Tag(name = "Tool Details Controller",description = "All api related tool")
 public class ToolDetailsController {
     @Autowired
     private ToolDetailsService toolDetailsService;
