@@ -10,6 +10,7 @@ import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 >>>>>>> 758d6d9 (discarded tool card)
+=======
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import java.util.*;
+>>>>>>> e8fed01 (New api to get tools with trending and recommended)
 
 @Service
 public class ToolDetailsService {
@@ -125,6 +132,49 @@ public class ToolDetailsService {
         return toolDetailsRepository.findById(id);
     }
 
+<<<<<<< HEAD
+=======
+        // Update all fields
+        existingTool.setToolName(updatedToolDetails.getToolName());
+        existingTool.setToolImage(updatedToolDetails.getToolImage());
+        existingTool.setToolFeatures(updatedToolDetails.getToolFeatures());
+        existingTool.setToolWebsiteLink(updatedToolDetails.getToolWebsiteLink());
+        existingTool.setToolDemoVideoLinks(updatedToolDetails.getToolDemoVideoLinks());
+        existingTool.setCategory(updatedToolDetails.getCategory());
+        existingTool.setToolDescription(updatedToolDetails.getToolDescription());
+
+        return toolDetailsRepository.save(existingTool);
+    }
+
+    public List<ToolDetails> getToolByTag(String toolTag) {
+        List<ToolDetails> existingTool =  toolDetailsRepository.findByToolTag(toolTag);
+//                .orElseThrow(() -> new ResourceNotFoundException("Tool not found with tag: " + tag));
+
+        if (toolTag.equals("trending")){
+            return toolSelector(existingTool,3); // for trending
+        }else {
+            return toolSelector(existingTool,6); // for recommend
+        }
+    }
+
+    private List<ToolDetails> toolSelector(List<ToolDetails> existingTool, int numberOfCard) {
+        Set<ToolDetails> selectedTool = new HashSet<>();
+        Random random = new Random();
+        while (selectedTool.size() < numberOfCard){
+            selectedTool.add(existingTool.get(random.nextInt(existingTool.size())));
+        }
+        List<ToolDetails> ans = selectedTool.stream().toList();
+        return  ans;
+    }
+//
+//    public Category findCategoryByName(String categoryName) {
+//        return categoryRepository.findByCategoryName(categoryName);
+//    }
+//
+//    public ToolDetails saveToolDetails(ToolDetails toolDetails) {
+//        return toolDetailsRepository.save(toolDetails);
+//    }
+>>>>>>> e8fed01 (New api to get tools with trending and recommended)
 //
 //    public ToolDetails createToolDetail(ToolDetails toolDetail) {
 //        return toolDetailsRepository.save(toolDetail);
