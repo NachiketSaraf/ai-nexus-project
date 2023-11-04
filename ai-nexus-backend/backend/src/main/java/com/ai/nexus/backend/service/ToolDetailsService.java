@@ -79,6 +79,7 @@ public class ToolDetailsService {
     @Transactional
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public List<ToolDetails> createToolDetails(List<ToolDetails> toolDetailsList) {
 =======
     public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
@@ -86,6 +87,9 @@ public class ToolDetailsService {
 =======
     public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
 >>>>>>> 4823e7a (discarded tool card)
+=======
+    public List<ToolDetails> createToolDetails(List<ToolDetails> toolDetailsList) {
+>>>>>>> 304d7ba (updated to get all card)
         List<ToolDetails> savedToolDetails = new ArrayList<>();
 
         for (ToolDetails toolDetails : toolDetailsList) {
