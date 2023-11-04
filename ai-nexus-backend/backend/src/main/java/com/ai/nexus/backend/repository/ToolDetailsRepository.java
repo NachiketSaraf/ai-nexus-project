@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ToolDetailsRepository extends JpaRepository<ToolDetails, Long> {
@@ -16,6 +17,7 @@ public interface ToolDetailsRepository extends JpaRepository<ToolDetails, Long> 
 <<<<<<< HEAD
     List<ToolDetails> findByCategory_CategoryName(String categoryName);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -27,4 +29,7 @@ public interface ToolDetailsRepository extends JpaRepository<ToolDetails, Long> 
     List<ToolDetails> findByCategory_CategoryName(String categoryName);
 
 >>>>>>> 7924521 (discarded tool card)
+=======
+    List<ToolDetails> findByToolTag(String toolTag);
+>>>>>>> 8ce7147 (New api to get tools with trending and recommended)
 }
