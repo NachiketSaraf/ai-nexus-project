@@ -11,10 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+<<<<<<< HEAD
 =======
 import org.springframework.stereotype.Service;
 
@@ -27,6 +31,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 >>>>>>> 130f04f (discarded tool card)
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
 
 @Service
 public class ToolDetailsService {
@@ -108,6 +114,27 @@ public class ToolDetailsService {
         existingTool.setToolDescription(updatedToolDetails.getToolDescription());
 
         return toolDetailsRepository.save(existingTool);
+    }
+
+    public List<ToolDetails> getToolByTag(String toolTag) {
+        List<ToolDetails> existingTool =  toolDetailsRepository.findByToolTag(toolTag);
+//                .orElseThrow(() -> new ResourceNotFoundException("Tool not found with tag: " + tag));
+
+        if (toolTag.equals("trending")){
+            return toolSelector(existingTool,3); // for trending
+        }else {
+            return toolSelector(existingTool,6); // for recommend
+        }
+    }
+
+    private List<ToolDetails> toolSelector(List<ToolDetails> existingTool, int numberOfCard) {
+        Set<ToolDetails> selectedTool = new HashSet<>();
+        Random random = new Random();
+        while (selectedTool.size() < numberOfCard){
+            selectedTool.add(existingTool.get(random.nextInt(existingTool.size())));
+        }
+        List<ToolDetails> ans = selectedTool.stream().toList();
+        return  ans;
     }
 //
 //    public Category findCategoryByName(String categoryName) {
