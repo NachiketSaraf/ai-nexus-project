@@ -8,6 +8,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./card.component.scss'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7cda774 (stuff)
  })
 export class CardComponent implements OnInit{
   selectedCategory: string="";
@@ -26,6 +29,7 @@ export class CardComponent implements OnInit{
 =======
   // standalone: true, 
 })
+<<<<<<< HEAD
 =======
  })
 >>>>>>> 5e16aff (card)
@@ -48,6 +52,23 @@ export class CardComponent implements OnInit{
   fetchCard(category: string) : void {
     this.selectedCategory = category;
     
+=======
+export class CardComponent implements OnInit{
+  @Input() selectedCategory: string="";
+  card: any[] = []; // Array to store card data
+
+  constructor(private cardService: CardService) {}
+
+  ngOnInit() {
+    this.fetchCard();
+  }
+
+  fetchCard() {
+    const selectedCategory = 'Image Generator';
+    this.cardService.getCard(selectedCategory).subscribe((card) => {
+      this.card = card;
+    });
+>>>>>>> 7cda774 (stuff)
   }
 }
   
@@ -86,8 +107,12 @@ export class CardComponent implements OnInit{
   //       this.card = card;
 
   //     });
+<<<<<<< HEAD
 >>>>>>> 3e6e2ac (stuff)
 =======
   };
   }
 >>>>>>> cc2e4e1 (card)
+=======
+>>>>>>> 32be760 (stuff)
+>>>>>>> 7cda774 (stuff)
