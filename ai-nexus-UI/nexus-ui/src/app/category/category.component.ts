@@ -21,9 +21,14 @@ export class CategoryComponent implements OnInit {
       },
       complete: () => {
 
+<<<<<<< HEAD
       }
     } 
     )
+=======
+  fetchCard(category: string): void {
+    this.selectedCategory = category;
+>>>>>>> 3e6e2ac (stuff)
   }
   ngOnInit(): void {
     // Fetch categories from your backend service

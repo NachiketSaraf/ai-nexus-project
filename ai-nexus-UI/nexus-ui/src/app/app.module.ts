@@ -15,12 +15,17 @@ import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
+<<<<<<< HEAD
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
 import { FullToolPageComponent } from './full-tool-page/full-tool-page.component';
 import { FullToolPageService } from './service/full-tool-page.service';
 
 
+=======
+import { ViewComponent } from './view/view.component';
+//import {MatIconModule} from '@angular/material/icon';
+>>>>>>> 3e6e2ac (stuff)
 
 
 
@@ -34,10 +39,14 @@ import { FullToolPageService } from './service/full-tool-page.service';
     CardComponent,
     AiToolsComponent,
     HomeComponent,
+<<<<<<< HEAD
     TrendingComponent,
     RecommendedComponent,
     FullToolPageComponent,
     
+=======
+    ViewComponent
+>>>>>>> 3e6e2ac (stuff)
 
   ],
   imports: [
