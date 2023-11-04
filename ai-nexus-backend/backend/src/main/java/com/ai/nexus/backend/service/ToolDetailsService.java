@@ -13,14 +13,20 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617cd0a (discarded tool card)
 =======
 >>>>>>> 4823e7a (discarded tool card)
+=======
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
+>>>>>>> b9fddfc (New api to get tools with trending and recommended)
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+<<<<<<< HEAD
 =======
 import org.springframework.stereotype.Service;
 
@@ -42,7 +48,12 @@ import java.util.*;
 >>>>>>> e8fed01 (New api to get tools with trending and recommended)
 =======
 >>>>>>> 130f04f (discarded tool card)
+<<<<<<< HEAD
 >>>>>>> 617cd0a (discarded tool card)
+=======
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
+>>>>>>> b9fddfc (New api to get tools with trending and recommended)
 
 @Service
 public class ToolDetailsService {
@@ -245,6 +256,9 @@ public class ToolDetailsService {
         return toolDetailsRepository.save(existingTool);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b9fddfc (New api to get tools with trending and recommended)
 
     public List<ToolDetails> getToolByTag(String toolTag) {
         List<ToolDetails> existingTool =  toolDetailsRepository.findByToolTag(toolTag);
@@ -266,8 +280,11 @@ public class ToolDetailsService {
         List<ToolDetails> ans = selectedTool.stream().toList();
         return  ans;
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 52caf26 (discarded tool card)
+=======
+>>>>>>> b9fddfc (New api to get tools with trending and recommended)
 //
 //    public Category findCategoryByName(String categoryName) {
 //        return categoryRepository.findByCategoryName(categoryName);
