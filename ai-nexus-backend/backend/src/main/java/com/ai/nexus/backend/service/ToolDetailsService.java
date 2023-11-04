@@ -9,12 +9,10 @@ import jakarta.transaction.Transactional;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ToolDetailsService {
@@ -96,6 +94,27 @@ public class ToolDetailsService {
         existingTool.setToolDescription(updatedToolDetails.getToolDescription());
 
         return toolDetailsRepository.save(existingTool);
+    }
+
+    public List<ToolDetails> getToolByTag(String toolTag) {
+        List<ToolDetails> existingTool =  toolDetailsRepository.findByToolTag(toolTag);
+//                .orElseThrow(() -> new ResourceNotFoundException("Tool not found with tag: " + tag));
+
+        if (toolTag.equals("trending")){
+            return toolSelector(existingTool,3); // for trending
+        }else {
+            return toolSelector(existingTool,6); // for recommend
+        }
+    }
+
+    private List<ToolDetails> toolSelector(List<ToolDetails> existingTool, int numberOfCard) {
+        Set<ToolDetails> selectedTool = new HashSet<>();
+        Random random = new Random();
+        while (selectedTool.size() < numberOfCard){
+            selectedTool.add(existingTool.get(random.nextInt(existingTool.size())));
+        }
+        List<ToolDetails> ans = selectedTool.stream().toList();
+        return  ans;
     }
 //
 //    public Category findCategoryByName(String categoryName) {
