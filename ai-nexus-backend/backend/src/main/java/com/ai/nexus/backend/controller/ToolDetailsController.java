@@ -6,6 +6,7 @@ import com.ai.nexus.backend.repository.CategoryRepository;
 import com.ai.nexus.backend.repository.ToolDetailsRepository;
 import com.ai.nexus.backend.service.ToolDetailsService;
 
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
@@ -35,7 +36,15 @@ public class ToolDetailsController {
     public ToolDetails getToolDetailByName(@PathVariable String name) {
         return toolDetailsService.getToolDetailsByName(name);
     }
-
+    @Operation(summary = "To get tool for \" trending \" and \"recommended\" "
+            ,description = "For every API call will return a list of all unique tools no single tool will be repeated in one call"+
+            "<h3> API input are: </h3> "
+            + "<ul><li>To get 3 tools for trending : <b>trending</b></li>"
+            + "<li>To get 3 tools for recommended : <b>recommended</b></li></ul>")
+    @GetMapping("by-tag/{toolTag}")
+    public List<ToolDetails> getToolByTag(@PathVariable String toolTag){
+        return toolDetailsService.getToolByTag(toolTag);
+    }
     @GetMapping("by-id/{id}")
     public ToolDetails getToolDetailsById(@PathVariable Long id) {
         Optional<ToolDetails> toolDetails = toolDetailsService.getToolDetailById(id);
