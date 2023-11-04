@@ -7,12 +7,21 @@ import com.ai.nexus.backend.repository.ToolDetailsRepository;
 import com.ai.nexus.backend.service.ToolDetailsService;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0aba792 (New api to get tools with trending and recommended)
 <<<<<<< HEAD
 import io.swagger.v3.oas.annotations.Operation;
 =======
 >>>>>>> 144ac6a (added swagger)
+<<<<<<< HEAD
 >>>>>>> 6f18d2b (added swagger)
+=======
+=======
+import io.swagger.v3.oas.annotations.Operation;
+>>>>>>> fc8f031 (New api to get tools with trending and recommended)
+>>>>>>> 0aba792 (New api to get tools with trending and recommended)
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 <<<<<<< HEAD
@@ -46,9 +55,21 @@ public class ToolDetailsController {
     public ToolDetails getToolDetailByName(@PathVariable String name) {
         return toolDetailsService.getToolDetailsByName(name);
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    @Operation(summary = "To get tool for \" trending \" and \"recommended\" "
+            ,description = "For every API call will return a list of all unique tools no single tool will be repeated in one call"+
+            "<h3> API input are: </h3> "
+            + "<ul><li>To get 3 tools for trending : <b>trending</b></li>"
+            + "<li>To get 3 tools for recommended : <b>recommended</b></li></ul>")
+    @GetMapping("by-tag/{toolTag}")
+    public List<ToolDetails> getToolByTag(@PathVariable String toolTag){
+        return toolDetailsService.getToolByTag(toolTag);
+    }
+>>>>>>> 0aba792 (New api to get tools with trending and recommended)
     @GetMapping("by-id/{id}")
 =======
     @GetMapping("test/{id}")
