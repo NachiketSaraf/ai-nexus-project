@@ -22,7 +22,7 @@ public class ToolDetailsService {
     @Autowired
     private CategoryRepository categoryRepository;
     @Transactional
-    public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
+    public List<ToolDetails> createToolDetails(List<ToolDetails> toolDetailsList) {
         List<ToolDetails> savedToolDetails = new ArrayList<>();
 
         for (ToolDetails toolDetails : toolDetailsList) {
