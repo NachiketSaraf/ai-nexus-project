@@ -29,6 +29,7 @@ public class ToolDetailsController {
     private ToolDetailsService toolDetailsService;
 
     // Get list of all details
+
     @GetMapping("/all")
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsService.getAllToolDetails();
@@ -57,8 +58,6 @@ public class ToolDetailsController {
         }
     }
 
-<<<<<<< HEAD
-=======
     @GetMapping("/byCategory/{categoryName}")
     public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
         List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
@@ -67,8 +66,8 @@ public class ToolDetailsController {
 
 
     @PostMapping("/insert")
-    public List<ToolDetails> insertToolDetails(@RequestBody List<ToolDetails> toolDetailsList) {
-        return toolDetailsService.insertToolDetails(toolDetailsList);
+    public List<ToolDetails> createToolDetails(@RequestBody List<ToolDetails> toolDetailsList) {
+        return toolDetailsService.createToolDetails(toolDetailsList);
     }
 
     //update tool image url
