@@ -37,7 +37,12 @@ public class ToolDetails {
     @JoinColumn(name = "category_id")
     private Category category;
 
+<<<<<<< HEAD
 
+=======
+    @Column(name = "tool_tag", columnDefinition = "text")
+    private String toolTag;
+>>>>>>> e389f31 (New api to get tools with trending and recommended)
 
     @Column(name = "tool_description", columnDefinition = "text")
     private String toolDescription;
