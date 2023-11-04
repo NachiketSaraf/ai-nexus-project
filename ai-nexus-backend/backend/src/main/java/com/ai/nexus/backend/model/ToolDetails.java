@@ -43,6 +43,7 @@ public class ToolDetails {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     @Column(name = "tool_tag", columnDefinition = "text")
@@ -51,6 +52,11 @@ public class ToolDetails {
 
 =======
 >>>>>>> b243707 (discarded tool card)
+=======
+    @Column(name = "tool_tag", columnDefinition = "text")
+    private String toolTag;
+
+>>>>>>> d447c9e (New api to get tools with trending and recommended)
     @Column(name = "tool_description", columnDefinition = "text")
     private String toolDescription;
 }
