@@ -5,9 +5,6 @@ import com.ai.nexus.backend.model.ToolDetails;
 import com.ai.nexus.backend.repository.CategoryRepository;
 import com.ai.nexus.backend.repository.ToolDetailsRepository;
 import com.ai.nexus.backend.service.ToolDetailsService;
-
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
