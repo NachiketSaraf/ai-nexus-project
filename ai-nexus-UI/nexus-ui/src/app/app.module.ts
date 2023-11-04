@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
+import { ViewComponent } from './view/view.component';
 //import {MatIconModule} from '@angular/material/icon';
 
 
@@ -29,7 +30,8 @@ import { HomeComponent } from './home/home.component';
     NavbarComponent,
     CardComponent,
     AiToolsComponent,
-    HomeComponent
+    HomeComponent,
+    ViewComponent
 
   ],
   imports: [
