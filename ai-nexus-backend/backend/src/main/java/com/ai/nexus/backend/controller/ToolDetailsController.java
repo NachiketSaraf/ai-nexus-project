@@ -6,6 +6,13 @@ import com.ai.nexus.backend.repository.CategoryRepository;
 import com.ai.nexus.backend.repository.ToolDetailsRepository;
 import com.ai.nexus.backend.service.ToolDetailsService;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import io.swagger.v3.oas.annotations.Operation;
+=======
+>>>>>>> 144ac6a (added swagger)
+>>>>>>> 6f18d2b (added swagger)
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 <<<<<<< HEAD
