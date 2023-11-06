@@ -16,8 +16,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 
+
+
+
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
+
 
 //import {MatIconModule} from '@angular/material/icon';
 import { FullToolPageComponent } from './full-tool-page/full-tool-page.component';
@@ -34,20 +38,11 @@ import { FullToolPageService } from './service/full-tool-page.service';
     CardComponent,
     AiToolsComponent,
     HomeComponent,
-
-
     TrendingComponent,
     RecommendedComponent,
     FullToolPageComponent,
   
-   
-
-    TrendingComponent,
-    RecommendedComponent,
-    
-
-    
-
+  
   ],
   imports: [
     BrowserModule,
