@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewComponent } from './view.component';
+import { TrendingComponent } from './trending.component';
 
-describe('ViewComponent', () => {
-  let component: ViewComponent;
-  let fixture: ComponentFixture<ViewComponent>;
+describe('TrendingComponent', () => {
+  let component: TrendingComponent;
+  let fixture: ComponentFixture<TrendingComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ViewComponent]
+      declarations: [TrendingComponent]
     });
-    fixture = TestBed.createComponent(ViewComponent);
+    fixture = TestBed.createComponent(TrendingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

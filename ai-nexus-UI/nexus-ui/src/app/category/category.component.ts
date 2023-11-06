@@ -19,7 +19,7 @@ export class CategoryComponent implements OnInit {
     this.categoryService.getCategoryNames().subscribe((data: string[]) => {
       this.categories = data;
     });
-  }
+  } 
 
 
   //   ngOnInit(): void {
