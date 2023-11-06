@@ -6,23 +6,22 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
-  // standalone: true, 
-})
+ })
 export class CardComponent implements OnInit{
-  @Input() selectedCategory: string="";
-  card: any[] = []; // Array to store card data
+  selectedCategory: string="All";
+  card!: any[]; // Array to store card data
 
   constructor(private cardService: CardService) {}
 
-  ngOnInit() {
-    this.fetchCard();
-  }
-
-  fetchCard() {
-    const selectedCategory = 'Image Generator';
-    this.cardService.getCard(selectedCategory).subscribe((card) => {
+  ngOnInit() : void {
+    this.cardService.getCard(this.selectedCategory).subscribe((card) => {
       this.card = card;
     });
+  }
+
+  fetchCard(category: string) : void {
+    this.selectedCategory = category;
+    
   }
 }
   
