@@ -11,7 +11,7 @@ export class CategoryComponent implements OnInit {
 
   constructor(private categoryService: CategoryService) { }
 
-  selectCategory(category: string): void {
+  fetchCard(category: string): void {
     this.selectedCategory = category;
   }
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class CategoryComponent implements OnInit {
     this.categoryService.getCategoryNames().subscribe((data: string[]) => {
       this.categories = data;
     });
-  }
+  } 
 
 
   //   ngOnInit(): void {

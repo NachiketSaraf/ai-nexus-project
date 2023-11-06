@@ -5,12 +5,15 @@ import { Observable ,map } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoryService {
+  
   private baseUrl = 'http://localhost:8080'; // Replace with your backend URL
+  
   constructor(private http: HttpClient) { }
+  
   getCategoryNames(): Observable<string[]> {
-    return this.http.get(`${this.baseUrl}/categories/all`).pipe(
-      map((response: any) => response as string[]));
+    return this.http.get<string[]>(`${this.baseUrl}/categories/all`);
   }
+  
   
 }
 // http://localhost:8080/tools/all
