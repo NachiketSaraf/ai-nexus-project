@@ -16,11 +16,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
 =======
 import { ViewComponent } from './view/view.component';
 >>>>>>> 32be760 (stuff)
+=======
+
+import { TrendingComponent } from './trending/trending.component';
+import { RecommendedComponent } from './recommended/recommended.component';
+>>>>>>> d5a9c5c (category)
 //import {MatIconModule} from '@angular/material/icon';
 
 
@@ -35,12 +41,18 @@ import { ViewComponent } from './view/view.component';
     AiToolsComponent,
     HomeComponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
     TrendingComponent,
     RecommendedComponent,
     
 =======
     ViewComponent
 >>>>>>> 32be760 (stuff)
+=======
+    TrendingComponent,
+    RecommendedComponent,
+    
+>>>>>>> d5a9c5c (category)
 
   ],
   imports: [
