@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 <<<<<<< HEAD
+<<<<<<< HEAD
  })
 export class CardComponent implements OnInit{
   selectedCategory: string="";
@@ -24,21 +25,24 @@ export class CardComponent implements OnInit{
 =======
   // standalone: true, 
 })
+=======
+ })
+>>>>>>> a7afa04 (card)
 export class CardComponent implements OnInit{
-  @Input() selectedCategory: string="";
-  card: any[] = []; // Array to store card data
+  selectedCategory: string="All";
+  card!: any[]; // Array to store card data
 
   constructor(private cardService: CardService) {}
 
-  ngOnInit() {
-    this.fetchCard();
-  }
-
-  fetchCard() {
-    const selectedCategory = 'Image Generator';
-    this.cardService.getCard(selectedCategory).subscribe((card) => {
+  ngOnInit() : void {
+    this.cardService.getCard(this.selectedCategory).subscribe((card) => {
       this.card = card;
     });
+  }
+
+  fetchCard(category: string) : void {
+    this.selectedCategory = category;
+    
   }
 }
   
