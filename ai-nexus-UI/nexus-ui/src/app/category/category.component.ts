@@ -35,7 +35,10 @@ export class CategoryComponent implements OnInit {
     this.categoryService.getCategoryNames().subscribe((data: string[]) => {
       this.categories = data;
     });
+<<<<<<< HEAD
     this.fetchCard("All");
+=======
+>>>>>>> d37c9a7 (category)
   } 
 
 

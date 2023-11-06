@@ -4,7 +4,10 @@ import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { AiToolsComponent } from './ai-tools/ai-tools.component';
+<<<<<<< HEAD
 import { FullToolPageComponent } from './full-tool-page/full-tool-page.component'
+=======
+>>>>>>> d37c9a7 (category)
 
 const routes: Routes = [
   { path: "", component: HomeComponent },

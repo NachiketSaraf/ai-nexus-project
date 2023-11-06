@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 import { Observable, tap } from 'rxjs';
+=======
+import { Observable } from 'rxjs';
+>>>>>>> d37c9a7 (category)
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +13,7 @@ export class CardService {
   cards: any[] = [];
   private baseUrl = 'http://localhost:8080'; // Replace with your backend URL
   constructor(private http: HttpClient) {} 
+<<<<<<< HEAD
   
 <<<<<<< HEAD
     getCard(categoryName :string ): Observable<any>{
@@ -16,12 +21,15 @@ export class CardService {
       console.log(url);
       return this.http.get(url);
 =======
+=======
+>>>>>>> d37c9a7 (category)
   
     getCard(categoryName :string ): Observable<string[]>{
-      const url = `${this.baseUrl}/tools/nameAndDescription/${categoryName}`;
+      const url = `${this.baseUrl}/api/tool-details${categoryName}`;
       return this.http.get<string[]>(url) ;
 >>>>>>> 3e6e2ac (stuff)
     }
+<<<<<<< HEAD
     setCards(cards: any[]) {
       this.cards = cards;
     }
@@ -39,3 +47,7 @@ export class CardService {
 
 // (response: any) => response as string[]: This is the function provided to the map() method. It takes a parameter response of type any and casts it as an array of strings (string[]). This means it's expecting the response to be an array, and it's explicitly stating that it should be treated as an array of strings.
 >>>>>>> 3e6e2ac (stuff)
+=======
+    
+}
+>>>>>>> d37c9a7 (category)
