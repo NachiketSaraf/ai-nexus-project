@@ -93,8 +93,31 @@
 <!-- <div class="col-md-12">
 =======
 </div> -->
+<<<<<<< HEAD
 <div class="col-md-12">
 >>>>>>> 5e16aff (card)
+=======
+
+<div *ngFor="let item of card" class="card" >
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ item.toolName }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{item.toolImage}}" >
+  <mat-card-content>
+    <p>
+      {{item.toolDescription}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button href="{{item.toolWebsiteLink}}" target="_blank">view</a>
+  </mat-card-actions>
+</mat-card>
+</div>
+
+<!-- <div class="col-md-12">
+>>>>>>> 059d2e3 (mat card)
   <div class="row">
     <div class="card">
       <ul>
@@ -110,6 +133,7 @@
     </div>
   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div> -->
 =======
 </div>
@@ -117,3 +141,6 @@
 =======
 </div>
 >>>>>>> 5e16aff (card)
+=======
+</div> -->
+>>>>>>> 059d2e3 (mat card)
