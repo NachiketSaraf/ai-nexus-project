@@ -15,7 +15,9 @@ import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
-import { ViewComponent } from './view/view.component';
+
+import { TrendingComponent } from './trending/trending.component';
+import { RecommendedComponent } from './recommended/recommended.component';
 //import {MatIconModule} from '@angular/material/icon';
 
 
@@ -29,7 +31,9 @@ import { ViewComponent } from './view/view.component';
     CardComponent,
     AiToolsComponent,
     HomeComponent,
-    ViewComponent
+    TrendingComponent,
+    RecommendedComponent,
+    
 
   ],
   imports: [
