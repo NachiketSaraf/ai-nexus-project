@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Observable } from 'rxjs/internal/Observable';
 =======
 <<<<<<< HEAD
@@ -13,6 +14,10 @@ import { Observable } from 'rxjs';
 import { Observable, tap } from 'rxjs';
 >>>>>>> 9ea63d0 (card)
 >>>>>>> 5550945 (card)
+=======
+import { Observable, tap } from 'rxjs';
+
+>>>>>>> 9b18927 (..)
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +31,7 @@ export class CardService {
       const url = `${this.baseUrl}/api/tool-details/${categoryName}`;
       console.log(url);
       return this.http.get(url);
+<<<<<<< HEAD
   
 <<<<<<< HEAD
     }
@@ -45,6 +51,11 @@ export class CardService {
     }
 >>>>>>> 9ea63d0 (card)
 >>>>>>> 5550945 (card)
+=======
+
+    }
+
+>>>>>>> 9b18927 (..)
     setCards(cards: any[]) {
       this.cards = cards;
     }

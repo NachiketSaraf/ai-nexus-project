@@ -13,6 +13,7 @@
 
 <div class="name">Category</div>
 <div class="category-box">
+<<<<<<< HEAD
 
   <button *ngFor="let category of categories" (click)="fetchCard(category)">{{ category }}</button>
 
@@ -38,17 +39,19 @@
 
 </div>
 
+=======
+  <button *ngFor="let category of categories" (click)="fetchCard(category)">{{ category }}</button>
+>>>>>>> 9b18927 (..)
 </div>
 
-
-
-<div *ngFor="let item of cards" class="card" >
+<!-- <div *ngFor="let item of cards" class="card">
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ item.toolName }}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{item.toolImage}}" >
+    <div class="img"></div>
+    <img mat-card-image src="{{item.toolImage}}" class="custom-card-image">
     <mat-card-content>
       <p>
         {{item.toolDescription}}
@@ -58,6 +61,7 @@
       <a mat-button href="{{item.toolWebsiteLink}}" target="_blank">view</a>
     </mat-card-actions>
   </mat-card>
+<<<<<<< HEAD
   </div>
 >>>>>>> cc2e4e1 (card)
 =======
@@ -87,3 +91,28 @@
   </mat-card>
   </div>
 >>>>>>> 5550945 (card)
+=======
+</div>
+<div class="name">Category</div>
+<div class="category-box">
+  <button *ngFor="let category of categories" (click)="fetchCard(category)">{{ category }}</button>
+</div> -->
+
+<div class="card-container" fxLayout="row wrap" fxLayout.xs="column ">
+  <ng-container *ngFor="let item of cards">
+    <mat-card class="example-card" fxFlex="33.33%" fxFlex.xs="100%">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ item.toolName }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ item.toolImage }}" alt="{{ item.toolName }}">
+      <mat-card-content>
+        <p>{{ item.toolDescription }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button href="/full-tool-page/{{item.toolName}}">View</a>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>
+>>>>>>> 9b18927 (..)

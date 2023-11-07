@@ -1,3 +1,4 @@
+//category
 .category-box {
     margin-top: 20px;
     display: inline-flex;
@@ -38,6 +39,7 @@
     font-size: xx-large;
 }
 
+<<<<<<< HEAD
 .example-card {
   max-width: 300px;
 }
@@ -61,4 +63,56 @@
   }
   
   /* Add more CSS styles for card appearance as needed */
+=======
+//cards
+.card {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+  }
+  
+  .example-card {
+    width: 300px;
+    margin: 16px;
+    color:black;
+    //box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  .example-header-image {
+   // background-image: url('your-avatar-image-url.jpg');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+  }
+  .mat-card-image {
+    max-height: 200px; /* Set the max height for the card image */
+  }
+  
+  .mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 0;
+  }
+  
+  mat-card-content {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  a.mat-button {
+    text-decoration: none;
+    color: #007bff;
+  }
+  a.mat-button:hover {
+    text-decoration: underline; /* Underline the link on hover */
+  }
+>>>>>>> 9b18927 (..)
   

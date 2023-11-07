@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7cda774 (stuff)
 =======
@@ -64,26 +65,32 @@ export class CardComponent implements OnInit{
 >>>>>>> d81d070 (card)
 export class CardComponent implements OnInit{
   selectedCategory: string="All";
-  card!: any[]; // Array to store card data
 =======
->>>>>>> 9ea63d0 (card)
 
-  constructor(private cardService: CardService) {}
+ })
+export class CardComponent implements OnInit{
+  selectCategory: string="All";
+>>>>>>> 9b18927 (..)
+  card!: any[]; // Array to store card data
+ constructor(private cardService: CardService) {}
 
   ngOnInit() : void {
         // Subscribe to the getCard method to fetch and update card data
     this.cardService.getCards().map((cards: any[]) => {
-      this.cards = cards;
+      this.card = cards;
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7cda774 (stuff)
 =======
 <<<<<<< HEAD
 >>>>>>> 5550945 (card)
+=======
+>>>>>>> 9b18927 (..)
   }
 
   fetchCard(category: string) : void {
-    this.selectedCategory = category;
+    this.selectCategory = category;
     
   }
 }
@@ -124,6 +131,7 @@ export class CardComponent implements OnInit{
 
   //     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3e6e2ac (stuff)
 =======
   };
@@ -139,3 +147,6 @@ export class CardComponent implements OnInit{
   }
 >>>>>>> 9ea63d0 (card)
 >>>>>>> 5550945 (card)
+=======
+
+>>>>>>> 9b18927 (..)
