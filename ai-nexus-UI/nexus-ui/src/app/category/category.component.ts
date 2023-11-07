@@ -7,18 +7,15 @@ import { CardService } from '../service/card.service';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent implements OnInit {
-  categories: string[] = [];
-  selectedCategory: string = '';
+  categories!: string[];
+  selectCategory: string ='' ;
 
   cards!: any[]; // Array to store card data
   constructor(private categoryService: CategoryService,private cardService : CardService) { }
 
   fetchCard(category: string): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9ea63d0 (card)
-    this.cardService.getCard( category).subscribe({
+
+    this.cardService.getCard(category).subscribe({
       next: (data: any) => {
         console.log(data);
         this.cards = data;
@@ -28,12 +25,9 @@ export class CategoryComponent implements OnInit {
       }
     } 
     )
-<<<<<<< HEAD
-=======
-    this.selectedCategory = category;
->>>>>>> 32be760 (stuff)
-=======
->>>>>>> 9ea63d0 (card)
+
+    this.selectCategory = category;
+
   }
   ngOnInit(): void {
     // Fetch categories from your backend service
@@ -41,21 +35,8 @@ export class CategoryComponent implements OnInit {
       this.categories = data;
     });
   } 
-
-
-  //   ngOnInit(): void {
-  //     this.getCategory()
-  //     console.log(this.getCategory());
-  //   }
-  //   getCategory() {
-  //     this.categoryService.getCategoryNames().subscribe((data: any) => {
-  //       this.categories = data;
-  //       console.log(this.categories);
-  //     })
-  //   }
-  //   selectCategory(category: string): void {
-  //     this.selectedCategory = category;
-  //   }
-
-
 }
+
+
+
+

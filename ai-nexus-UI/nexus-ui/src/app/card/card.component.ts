@@ -6,47 +6,22 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
-<<<<<<< HEAD
-<<<<<<< HEAD
+
  })
 export class CardComponent implements OnInit{
-  selectedCategory: string="";
-  cards!: any[]; // Array to store card data
-<<<<<<< HEAD
-
-  constructor(private cardService: CardService) {}
-
-  ngOnInit() : void {
-        // Subscribe to the getCard method to fetch and update card data
-    this.cardService.getCards().map((cards: any[]) => {
-      this.cards = cards;
-    });
-  };
-  }
-=======
-  // standalone: true, 
-})
-=======
- })
->>>>>>> a7afa04 (card)
-export class CardComponent implements OnInit{
-  selectedCategory: string="All";
+  selectCategory: string="All";
   card!: any[]; // Array to store card data
-=======
->>>>>>> 9ea63d0 (card)
-
-  constructor(private cardService: CardService) {}
+ constructor(private cardService: CardService) {}
 
   ngOnInit() : void {
         // Subscribe to the getCard method to fetch and update card data
     this.cardService.getCards().map((cards: any[]) => {
-      this.cards = cards;
+      this.card = cards;
     });
-<<<<<<< HEAD
   }
 
   fetchCard(category: string) : void {
-    this.selectedCategory = category;
+    this.selectCategory = category;
     
   }
 }
@@ -86,8 +61,4 @@ export class CardComponent implements OnInit{
   //       this.card = card;
 
   //     });
->>>>>>> 32be760 (stuff)
-=======
-  };
-  }
->>>>>>> 9ea63d0 (card)
+
