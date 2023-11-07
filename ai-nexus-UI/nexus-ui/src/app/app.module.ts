@@ -31,6 +31,13 @@ import { RecommendedComponent } from './recommended/recommended.component';
 
 
 
+<<<<<<< HEAD
+=======
+import { HomeComponent } from './home/home.component';
+import { RecommendedComponent } from './recommended/recommended.component';
+import { TrendingComponent } from './trending/trending.component';
+
+>>>>>>> 39281af (..)
 
 @NgModule({
   declarations: [
