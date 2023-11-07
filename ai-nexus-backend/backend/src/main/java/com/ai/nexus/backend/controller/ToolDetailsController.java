@@ -8,6 +8,7 @@ import com.ai.nexus.backend.service.ToolDetailsService;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0aba792 (New api to get tools with trending and recommended)
@@ -26,9 +27,28 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 <<<<<<< HEAD
 =======
+import io.swagger.v3.oas.annotations.Operation;
+=======
+>>>>>>> 144ac6a (added swagger)
+=======
+import io.swagger.v3.oas.annotations.Operation;
+>>>>>>> fc8f031 (New api to get tools with trending and recommended)
+import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
+=======
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
 >>>>>>> c9b064d (discarded tool card)
+<<<<<<< HEAD
+=======
+=======
+import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.http.ResponseEntity;
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -92,6 +112,7 @@ public class ToolDetailsController {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @GetMapping("/byCategory/{categoryName}")
     public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
         List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
@@ -124,6 +145,8 @@ public class ToolDetailsController {
 >>>>>>> 138c711 (updated to get all card)
     @GetMapping("/byCategory/{categoryName}")
 =======
+=======
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
     @GetMapping("/{categoryName}")
 >>>>>>> 46abb0a (updated to get all card)
     public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
@@ -177,7 +200,17 @@ public class ToolDetailsController {
 
 }
 
+<<<<<<< HEAD
     @GetMapping("/byCategory/{categoryName}")
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 39281af7f2aad36404aeb5eb48de6a6c10bdefbb
+    @GetMapping("/byCategory/{categoryName}")
+=======
+    @GetMapping("/{categoryName}")
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
     public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
         List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
         return ResponseEntity.ok(toolDetails);
@@ -203,7 +236,14 @@ public class ToolDetailsController {
 
 }
 
+<<<<<<< HEAD
 >>>>>>> c9b064d (discarded tool card)
+=======
+<<<<<<< HEAD
+>>>>>>> c9b064d (discarded tool card)
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 //    @PostMapping
 //    public ToolDetails createToolDetails(@RequestBody ToolDetails toolDetails) {
 //        return toolDetailsService.createToolDetail(toolDetails);

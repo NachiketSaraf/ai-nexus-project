@@ -14,6 +14,7 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617cd0a (discarded tool card)
 =======
@@ -22,6 +23,10 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 =======
 >>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
 >>>>>>> b9fddfc (New api to get tools with trending and recommended)
+=======
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +44,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 758d6d9 (discarded tool card)
 =======
 import org.springframework.http.ResponseEntity;
@@ -54,12 +60,18 @@ import java.util.*;
 =======
 >>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
 >>>>>>> b9fddfc (New api to get tools with trending and recommended)
+=======
+>>>>>>> 130f04f (discarded tool card)
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 
 @Service
 public class ToolDetailsService {
     @Autowired
     private  ToolDetailsRepository toolDetailsRepository;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +86,11 @@ public class ToolDetailsService {
 =======
 >>>>>>> 4823e7a (discarded tool card)
 =======
+=======
+=======
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
     @Autowired
     private CategoryRepository categoryRepository;
     @Transactional
@@ -169,6 +186,7 @@ public class ToolDetailsService {
         return updatedTools;
     }
 
+<<<<<<< HEAD
 >>>>>>> 758d6d9 (discarded tool card)
 =======
 >>>>>>> a1205b5 (discarded tool card)
@@ -224,6 +242,12 @@ public class ToolDetailsService {
 
 >>>>>>> c9b064d (discarded tool card)
 >>>>>>> 4823e7a (discarded tool card)
+=======
+<<<<<<< HEAD
+>>>>>>> c9b064d (discarded tool card)
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();

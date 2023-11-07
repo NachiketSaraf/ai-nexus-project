@@ -19,6 +19,7 @@
 
 </div>
 
+<<<<<<< HEAD
 <div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
   <ng-container *ngFor="let item of cards">
     <mat-card class="example-card" fxFlex="33.33%" fxFlex.xs="100%">
@@ -74,12 +75,16 @@
 
 
 <div *ngFor="let item of cards" class="card" >
+=======
+<!-- <div *ngFor="let item of cards" class="card">
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ item.toolName }}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{item.toolImage}}" >
+    <div class="img"></div>
+    <img mat-card-image src="{{item.toolImage}}" class="custom-card-image">
     <mat-card-content>
       <p>
         {{item.toolDescription}}
@@ -89,9 +94,12 @@
       <a mat-button href="{{item.toolWebsiteLink}}" target="_blank">view</a>
     </mat-card-actions>
   </mat-card>
+<<<<<<< HEAD
   </div>
 >>>>>>> 5550945 (card)
 =======
+=======
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 </div>
 <div class="name">Category</div>
 <div class="category-box">
@@ -114,5 +122,9 @@
       </mat-card-actions>
     </mat-card>
   </ng-container>
+<<<<<<< HEAD
 </div>
 >>>>>>> 9b18927 (..)
+=======
+</div>
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3

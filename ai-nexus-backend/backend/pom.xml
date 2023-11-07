@@ -48,6 +48,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 57b28d6 (discarded tool card)
 =======
@@ -55,6 +56,11 @@
 =======
 >>>>>>> 4823e7a (discarded tool card)
 =======
+=======
+=======
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
@@ -84,6 +90,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 758d6d9 (discarded tool card)
 =======
 >>>>>>> 3bc4aef (discarded tool card)
@@ -104,6 +111,11 @@
 
 >>>>>>> c9b064d (discarded tool card)
 >>>>>>> 4823e7a (discarded tool card)
+=======
+>>>>>>> c9b064d (discarded tool card)
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 	</dependencies>
 
 	<build>
