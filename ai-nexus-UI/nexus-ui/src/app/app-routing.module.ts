@@ -10,11 +10,18 @@ import { FullToolPageComponent } from './full-tool-page/full-tool-page.component
 >>>>>>> d37c9a7 (category)
 
 const routes: Routes = [
+<<<<<<< HEAD
   { path: "", component: HomeComponent },
   { path: "category", component: CategoryComponent },
   { path: "ai-tools/card/:category", component: CardComponent },
   { path: "ai-tools", component: AiToolsComponent },
   { path: "full-tool-page", component: FullToolPageComponent }
+=======
+  { path : "", component : HomeComponent},
+ { path : "category" , component :CategoryComponent},
+ { path : "ai-tools/card/:category" , component : CardComponent},
+ { path : "ai-tools" , component : AiToolsComponent}
+>>>>>>> cc2e4e1 (card)
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

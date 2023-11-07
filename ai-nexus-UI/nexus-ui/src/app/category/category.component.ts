@@ -9,18 +9,27 @@ import { CardService } from '../service/card.service';
 export class CategoryComponent implements OnInit {
   categories: string[] = [];
   selectedCategory: string = '';
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> cc2e4e1 (card)
   cards!: any[]; // Array to store card data
   constructor(private categoryService: CategoryService,private cardService : CardService) { }
 
   fetchCard(category: string): void {
+<<<<<<< HEAD
     this.cardService.getCard(category).subscribe({
+=======
+    this.cardService.getCard( category).subscribe({
+>>>>>>> cc2e4e1 (card)
       next: (data: any) => {
         console.log(data);
         this.cards = data;
       },
       complete: () => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     } 
@@ -29,6 +38,11 @@ export class CategoryComponent implements OnInit {
   fetchCard(category: string): void {
     this.selectedCategory = category;
 >>>>>>> 3e6e2ac (stuff)
+=======
+      }
+    } 
+    )
+>>>>>>> cc2e4e1 (card)
   }
   ngOnInit(): void {
     // Fetch categories from your backend service

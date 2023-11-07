@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Observable, tap } from 'rxjs';
 =======
 import { Observable } from 'rxjs';
 >>>>>>> d37c9a7 (category)
+=======
+import { Observable, tap } from 'rxjs';
+>>>>>>> cc2e4e1 (card)
 
 @Injectable({
   providedIn: 'root'
@@ -24,12 +28,20 @@ export class CardService {
 =======
 >>>>>>> d37c9a7 (category)
   
+<<<<<<< HEAD
     getCard(categoryName :string ): Observable<string[]>{
       const url = `${this.baseUrl}/api/tool-details${categoryName}`;
       return this.http.get<string[]>(url) ;
 >>>>>>> 3e6e2ac (stuff)
     }
 <<<<<<< HEAD
+=======
+    getCard(categoryName :string ): Observable<any>{
+      const url = `${this.baseUrl}/api/tool-details/${categoryName}`;
+      console.log(url);
+      return this.http.get(url);
+    }
+>>>>>>> cc2e4e1 (card)
     setCards(cards: any[]) {
       this.cards = cards;
     }
