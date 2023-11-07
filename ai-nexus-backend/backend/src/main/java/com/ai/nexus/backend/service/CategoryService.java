@@ -13,9 +13,12 @@ public class CategoryService {
     private CategoryRepository categoryRepository;
 
     public List<String> getAllCategoryNames() {
-        return categoryRepository.findAllCategoryNames();
+        return categoryRepository.findAllCategoryName();
     }
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
+    }
+    public List<String> getAllCategoriesNameOnly() {
+        return categoryRepository.findAllCategoryName();
     }
 }

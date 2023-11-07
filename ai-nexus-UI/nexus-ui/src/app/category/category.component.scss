@@ -1,0 +1,64 @@
+.category-box {
+    margin-top: 20px;
+    display: inline-flex;
+    /* Display buttons in a row */
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-left: 30px;
+
+    justify-content: center;
+    /* Center-align buttons horizontally */
+    gap: 20px;
+    /* Add space between buttons */
+}
+
+.category-box button {
+    background-color: #2f1302;
+    /* Button background color */
+    color: #fff;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding around text */
+    border: none;
+    /* Remove button border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.category-box button:hover {
+    background-color: #5f8829;
+    /* Hover background color */
+
+}
+
+.name {
+    margin-top: 70px;
+    font-size: xx-large;
+}
+
+.example-card {
+  max-width: 300px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed for horizontal spacing */
+    align-items: flex-start; /* Adjust as needed for vertical alignment */
+    margin: -8px; /* Adjust as needed for card spacing */
+  }
+  
+  .mat-card {
+    flex: 0 0 calc(33.33% - 16px); /* Adjust as needed for card width and margin */
+    margin: 8px; /* Adjust as needed for card spacing */
+  }
+  
+  /* Add more CSS styles for card appearance as needed */
+  
