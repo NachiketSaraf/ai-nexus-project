@@ -15,6 +15,9 @@ export class CategoryComponent implements OnInit {
 
   fetchCard(category: string): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9ea63d0 (card)
     this.cardService.getCard( category).subscribe({
       next: (data: any) => {
         console.log(data);
@@ -25,9 +28,12 @@ export class CategoryComponent implements OnInit {
       }
     } 
     )
+<<<<<<< HEAD
 =======
     this.selectedCategory = category;
 >>>>>>> 32be760 (stuff)
+=======
+>>>>>>> 9ea63d0 (card)
   }
   ngOnInit(): void {
     // Fetch categories from your backend service

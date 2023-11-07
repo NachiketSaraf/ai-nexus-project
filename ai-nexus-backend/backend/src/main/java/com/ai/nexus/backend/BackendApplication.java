@@ -2,9 +2,12 @@ package com.ai.nexus.backend;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import io.swagger.v3.oas.annotations.info.Contact;
 >>>>>>> c00b80d (added swagger)
+=======
+>>>>>>> 9ea63d0 (card)
 import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
