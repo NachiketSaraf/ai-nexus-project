@@ -19,6 +19,8 @@ import { MatCardModule } from '@angular/material/card';
 
 
 import { HomeComponent } from './home/home.component';
+import { RecommendedComponent } from './recommended/recommended.component';
+import { TrendingComponent } from './trending/trending.component';
 
 
 @NgModule({
