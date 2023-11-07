@@ -20,7 +20,10 @@ public class ToolDetailsService {
     private  ToolDetailsRepository toolDetailsRepository;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
     @Autowired
     private CategoryRepository categoryRepository;
     @Transactional
@@ -65,7 +68,10 @@ public class ToolDetailsService {
         return updatedTools;
     }
 
+<<<<<<< HEAD
 >>>>>>> c9b064d (discarded tool card)
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();

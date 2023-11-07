@@ -14,15 +14,11 @@ import { CardService } from './service/card.service';
 import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
-import { HomeComponent } from './home/home.component';
-
-import { TrendingComponent } from './trending/trending.component';
-import { RecommendedComponent } from './recommended/recommended.component';
 //import {MatIconModule} from '@angular/material/icon';
 
 
 
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -47,14 +43,8 @@ import { RecommendedComponent } from './recommended/recommended.component';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    //MatIconModule
-
-
+    // MatIconModule
     BrowserAnimationsModule
-
-  
-
-
   ],
   providers: [CategoryService, CardService],
   bootstrap: [AppComponent]
