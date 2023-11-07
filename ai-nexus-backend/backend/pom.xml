@@ -42,7 +42,10 @@
 			<scope>test</scope>
 		</dependency>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
@@ -65,7 +68,10 @@
 		</dependency>
 
 
+<<<<<<< HEAD
 >>>>>>> c9b064d (discarded tool card)
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
 	</dependencies>
 
 	<build>

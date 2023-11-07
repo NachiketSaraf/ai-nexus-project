@@ -17,10 +17,15 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
 >>>>>>> c9b064d (discarded tool card)
+=======
+import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.http.ResponseEntity;
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -65,6 +70,7 @@ public class ToolDetailsController {
         }
     }
 
+<<<<<<< HEAD
     @GetMapping("/{categoryName}")
     public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
         List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
@@ -117,7 +123,13 @@ public class ToolDetailsController {
 
 }
 
+=======
+<<<<<<< HEAD
+>>>>>>> 39281af7f2aad36404aeb5eb48de6a6c10bdefbb
     @GetMapping("/byCategory/{categoryName}")
+=======
+    @GetMapping("/{categoryName}")
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
     public ResponseEntity<List<ToolDetails>> getToolDetailsByCategory(@PathVariable String categoryName) {
         List<ToolDetails> toolDetails = toolDetailsService.getToolDetailsByCategory(categoryName);
         return ResponseEntity.ok(toolDetails);
@@ -143,7 +155,10 @@ public class ToolDetailsController {
 
 }
 
+<<<<<<< HEAD
 >>>>>>> c9b064d (discarded tool card)
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
 //    @PostMapping
 //    public ToolDetails createToolDetails(@RequestBody ToolDetails toolDetails) {
 //        return toolDetailsService.createToolDetail(toolDetails);
