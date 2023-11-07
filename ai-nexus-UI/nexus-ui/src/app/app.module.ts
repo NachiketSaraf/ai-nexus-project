@@ -18,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
+import { FullToolPageComponent } from './full-tool-page/full-tool-page.component';
+import { FullToolPageService } from './service/full-tool-page.service';
 //import {MatIconModule} from '@angular/material/icon';
 
 
@@ -33,6 +35,7 @@ import { RecommendedComponent } from './recommended/recommended.component';
     HomeComponent,
     TrendingComponent,
     RecommendedComponent,
+    FullToolPageComponent,
     
 
   ],
@@ -49,7 +52,7 @@ import { RecommendedComponent } from './recommended/recommended.component';
   BrowserAnimationsModule
 
   ],
-  providers: [CategoryService, CardService],
+  providers: [CategoryService, CardService,FullToolPageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
