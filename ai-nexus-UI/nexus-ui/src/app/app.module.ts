@@ -14,14 +14,11 @@ import { CardService } from './service/card.service';
 import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+
 import { HomeComponent } from './home/home.component';
-
-
-
 
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
-
 
 //import {MatIconModule} from '@angular/material/icon';
 import { FullToolPageComponent } from './full-tool-page/full-tool-page.component';
@@ -29,13 +26,6 @@ import { FullToolPageService } from './service/full-tool-page.service';
 //import {MatIconModule} from '@angular/material/icon';
 
 
-<<<<<<< HEAD
-=======
-import { HomeComponent } from './home/home.component';
-import { RecommendedComponent } from './recommended/recommended.component';
-import { TrendingComponent } from './trending/trending.component';
-
->>>>>>> 39281af (..)
 
 @NgModule({
   declarations: [
@@ -45,16 +35,17 @@ import { TrendingComponent } from './trending/trending.component';
     CardComponent,
     AiToolsComponent,
     HomeComponent,
+
     TrendingComponent,
     RecommendedComponent,
     FullToolPageComponent,
   
   
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
