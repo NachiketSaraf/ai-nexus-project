@@ -63,4 +63,27 @@
 =======
   <button *ngFor="let category of categories" (click)="selectCategory(category)">{{ category }}</button>
 </div>
+<<<<<<< HEAD
 >>>>>>> 7cda774 (stuff)
+=======
+
+
+
+<div *ngFor="let item of cards" class="card" >
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ item.toolName }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{item.toolImage}}" >
+    <mat-card-content>
+      <p>
+        {{item.toolDescription}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button href="{{item.toolWebsiteLink}}" target="_blank">view</a>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+>>>>>>> 5550945 (card)

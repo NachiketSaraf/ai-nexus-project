@@ -65,14 +65,21 @@ export class CardComponent implements OnInit{
 export class CardComponent implements OnInit{
   selectedCategory: string="All";
   card!: any[]; // Array to store card data
+=======
+>>>>>>> 9ea63d0 (card)
 
   constructor(private cardService: CardService) {}
 
   ngOnInit() : void {
-    this.cardService.getCard(this.selectedCategory).subscribe((card) => {
-      this.card = card;
+        // Subscribe to the getCard method to fetch and update card data
+    this.cardService.getCards().map((cards: any[]) => {
+      this.cards = cards;
     });
+<<<<<<< HEAD
 >>>>>>> 7cda774 (stuff)
+=======
+<<<<<<< HEAD
+>>>>>>> 5550945 (card)
   }
 
   fetchCard(category: string) : void {
@@ -124,4 +131,11 @@ export class CardComponent implements OnInit{
 >>>>>>> cc2e4e1 (card)
 =======
 >>>>>>> 32be760 (stuff)
+<<<<<<< HEAD
 >>>>>>> 7cda774 (stuff)
+=======
+=======
+  };
+  }
+>>>>>>> 9ea63d0 (card)
+>>>>>>> 5550945 (card)
