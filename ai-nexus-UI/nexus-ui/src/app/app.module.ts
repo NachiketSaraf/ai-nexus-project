@@ -29,6 +29,13 @@ import { FullToolPageService } from './service/full-tool-page.service';
 //import {MatIconModule} from '@angular/material/icon';
 
 
+<<<<<<< HEAD
+=======
+import { HomeComponent } from './home/home.component';
+import { RecommendedComponent } from './recommended/recommended.component';
+import { TrendingComponent } from './trending/trending.component';
+
+>>>>>>> 39281af (..)
 
 @NgModule({
   declarations: [
