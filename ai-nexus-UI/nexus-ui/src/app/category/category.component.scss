@@ -37,3 +37,28 @@
     margin-top: 70px;
     font-size: xx-large;
 }
+
+.example-card {
+  max-width: 300px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed for horizontal spacing */
+    align-items: flex-start; /* Adjust as needed for vertical alignment */
+    margin: -8px; /* Adjust as needed for card spacing */
+  }
+  
+  .mat-card {
+    flex: 0 0 calc(33.33% - 16px); /* Adjust as needed for card width and margin */
+    margin: 8px; /* Adjust as needed for card spacing */
+  }
+  
+  /* Add more CSS styles for card appearance as needed */
+  

@@ -10,28 +10,26 @@
       <li *ngFor="let category of categories">{{ category }}</li>
     </ul>
   </div> -->
-  
+
 <div class="name">Category</div>
 <div class="category-box">
   <button *ngFor="let category of categories" (click)="fetchCard(category)">{{ category }}</button>
 </div>
 
-
-
-<div *ngFor="let item of cards" class="card" >
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ item.toolName }}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="{{item.toolImage}}" >
-    <mat-card-content>
-      <p>
-        {{item.toolDescription}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a mat-button href="{{item.toolWebsiteLink}}" target="_blank">view</a>
-    </mat-card-actions>
-  </mat-card>
-  </div>
+<div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
+  <ng-container *ngFor="let item of cards">
+    <mat-card class="example-card" fxFlex="33.33%" fxFlex.xs="100%">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ item.toolName }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ item.toolImage }}" alt="{{ item.toolName }}">
+      <mat-card-content>
+        <p>{{ item.toolDescription }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button href="{{ item.toolWebsiteLink }}" target="_blank">View</a>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>

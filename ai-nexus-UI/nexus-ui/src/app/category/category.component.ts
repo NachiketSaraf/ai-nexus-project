@@ -9,12 +9,12 @@ import { CardService } from '../service/card.service';
 export class CategoryComponent implements OnInit {
   categories: string[] = [];
   selectedCategory: string = '';
-
+  
   cards!: any[]; // Array to store card data
   constructor(private categoryService: CategoryService,private cardService : CardService) { }
 
   fetchCard(category: string): void {
-    this.cardService.getCard( category).subscribe({
+    this.cardService.getCard(category).subscribe({
       next: (data: any) => {
         console.log(data);
         this.cards = data;
@@ -30,6 +30,7 @@ export class CategoryComponent implements OnInit {
     this.categoryService.getCategoryNames().subscribe((data: string[]) => {
       this.categories = data;
     });
+    this.fetchCard("All");
   } 
 
 
