@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../service/category.service';
+import { CardService } from '../service/card.service';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -8,18 +9,29 @@ import { CategoryService } from '../service/category.service';
 export class CategoryComponent implements OnInit {
   categories: string[] = [];
   selectedCategory: string = '';
+  
+  cards!: any[]; // Array to store card data
+  constructor(private categoryService: CategoryService,private cardService : CardService) { }
 
-  constructor(private categoryService: CategoryService) { }
+  fetchCard(category: string): void {
+    this.cardService.getCard(category).subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.cards = data;
+      },
+      complete: () => {
 
-  selectCategory(category: string): void {
-    this.selectedCategory = category;
+      }
+    } 
+    )
   }
   ngOnInit(): void {
     // Fetch categories from your backend service
     this.categoryService.getCategoryNames().subscribe((data: string[]) => {
       this.categories = data;
     });
-  }
+    this.fetchCard("All");
+  } 
 
 
   //   ngOnInit(): void {
