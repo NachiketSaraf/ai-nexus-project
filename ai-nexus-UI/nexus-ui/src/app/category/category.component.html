@@ -1,31 +1,30 @@
-<!-- <h2>Category</h2>
-<div class="category-box" >
-
-<button class="custom-" *ngFor="let item of category" (click)="selectCategory(item)">{{ item }}</button>
-</div> -->
-
-<!-- <div>
-    <h2>List of Categories</h2>
-    <ul>
-      <li *ngFor="let category of categories">{{ category }}</li>
-    </ul>
-  </div> -->
 
 <div class="category-box">
   <div class="name">
-    <h1>Category</h1>
+    <h1>Categorys</h1>
   </div>
 </div>
 <div class="category-box">
-  <button *ngFor="let category of categories" (click)="fetchCard(category)">{{ category }}</button>
+  <button *ngFor="let category of categories" (click)="fetchCard(category)"
+    [style.background-color]="selectedCategory === category ? 'rgb(8, 154, 8)' : ''">
+    {{ category }}
+  </button>
 </div>
-
+<br><br>
 <hr color="#E01C48" width="40%">
+
 <div class="category-box">
-  <div class="name">
+  <div class="tool-name">
     <h1>Tools</h1>
   </div>
 </div>
+
+<div class="about-tool">
+  <div class="cat-name">{{selectedCategory}}</div>
+  <div class="tool-count">No of tools: {{cards.length}}</div>
+</div>
+
+
 <div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
   <ng-container *ngFor="let item of cards">
     <mat-card class="example-card" fxFlex="33.33%" fxFlex.xs="100%">
@@ -38,6 +37,7 @@
         <p>{{ item.toolDescription }}</p>
       </mat-card-content>
       <mat-card-actions>
+        <button mat-button class="custom-button" color="accent"></button>
         <a mat-raised-button color="#" href="/full-tool-page/{{item.toolName}}">View</a>
       </mat-card-actions>
     </mat-card>
