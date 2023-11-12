@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../service/category.service';
 import { CardService } from '../service/card.service';
+// import {MatCardModule} 
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -8,10 +9,12 @@ import { CardService } from '../service/card.service';
 })
 export class CategoryComponent implements OnInit {
 
-  categories: string[] = [];
-  selectedCategory: string = '';
+  categories!: string[];
+  selectCategory: string ='' ;
+
   cards!: any[]; // Array to store card data
-  constructor(private categoryService: CategoryService,private cardService : CardService) { }
+  constructor(private categoryService: CategoryService, private cardService: CardService) { }
+
 
   fetchCard(category: string): void {
     this.cardService.getCard(category).subscribe({
@@ -23,11 +26,18 @@ export class CategoryComponent implements OnInit {
 
 
       }
-      })
+    } 
+    )
 
-  }
+
+  fetchCard(category: string): void {
+    this.selectedCategory = category;
+
+    } 
+
+    this.selectCategory = category;
+ }
   ngOnInit(): void {
-    // Fetch categories from your backend service
     this.categoryService.getCategoryNames().subscribe((data: string[]) => {
       this.categories = data;
     });
@@ -35,10 +45,7 @@ export class CategoryComponent implements OnInit {
     this.fetchCard("All");
 
   } 
-  
-
 }
-
 
 
 

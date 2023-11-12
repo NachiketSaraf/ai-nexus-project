@@ -15,8 +15,9 @@ export class CardComponent implements OnInit{
  constructor(private cardService: CardService) {}
 
   ngOnInit() : void {
-        // Subscribe to the getCard method to fetch and update card data
-    this.cardService.getCards().map((cards: any[]) => {
+       
+    // Subscribe to the getCard method to fetch and update card data
+    this.cardService['getCards']().map((cards: any[]) => {
       this.card = cards;
     });
 

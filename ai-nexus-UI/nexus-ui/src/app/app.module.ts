@@ -9,7 +9,7 @@ import { CategoryService } from './service/category.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { CardComponent } from './card/card.component';
+// import { CardComponent } from './card/card.component';
 import { CardService } from './service/card.service';
 import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -30,7 +30,7 @@ import { RecommendedComponent } from './recommended/recommended.component';
     AppComponent,
     CategoryComponent,
     NavbarComponent,
-    CardComponent,
+    // CardComponent,
     AiToolsComponent,
     HomeComponent,
 
