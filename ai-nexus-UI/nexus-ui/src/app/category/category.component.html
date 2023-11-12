@@ -11,11 +11,21 @@
     </ul>
   </div> -->
 
-<div class="name">Category</div>
+<div class="category-box">
+  <div class="name">
+    <h1>Category</h1>
+  </div>
+</div>
 <div class="category-box">
   <button *ngFor="let category of categories" (click)="fetchCard(category)">{{ category }}</button>
 </div>
 
+<hr color="#E01C48" width="40%">
+<div class="category-box">
+  <div class="name">
+    <h1>Tools</h1>
+  </div>
+</div>
 <div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
   <ng-container *ngFor="let item of cards">
     <mat-card class="example-card" fxFlex="33.33%" fxFlex.xs="100%">
@@ -28,7 +38,7 @@
         <p>{{ item.toolDescription }}</p>
       </mat-card-content>
       <mat-card-actions>
-        <a mat-button href="/full-tool-page/{{item.toolName}}">View</a>
+        <a mat-raised-button color="#" href="/full-tool-page/{{item.toolName}}">View</a>
       </mat-card-actions>
     </mat-card>
   </ng-container>

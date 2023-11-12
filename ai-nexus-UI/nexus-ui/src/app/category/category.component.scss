@@ -14,7 +14,7 @@
 }
 
 .category-box button {
-    background-color: #212223;
+    background-color: #3a3b3d;
     /* Button background color */
     color: #fff;
     /* Text color */
@@ -36,7 +36,8 @@
 
 .name {
     margin-top: 70px;
-    color: #96FA7D;
+    // color: #96FA7D;
+    color: #E01C48;
     font-size: xx-large;
 }
 
@@ -87,7 +88,8 @@
     
   }
   .mat-card-image {
-    max-height: 200px; /* Set the max height for the card image */
+    max-width: 100;
+    max-height: 50px; /* Set the max height for the card image */
   }
   
   .mat-card-title {
@@ -98,11 +100,18 @@
   
   mat-card-content {
     font-size: 14px;
+    width: auto;
+    height: 50px;
     margin: 8px 0;
   }
   
+  mat-raised-button{
+    
+  }
   mat-card-actions {
-    display: flex;
+    color:#E01C48;
+    background-color: #3a3b3d;
+    display:flex;
     justify-content: flex-end;
   }
   
