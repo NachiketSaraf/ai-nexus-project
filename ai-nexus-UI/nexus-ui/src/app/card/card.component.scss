@@ -1,0 +1,40 @@
+
+.card {
+
+  display: inline;
+  /* Display buttons in a row */
+  //flex-wrap: wrap;
+  width: 300px; /* Set the width of each card */
+  height: 150px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  /* Center-align buttons horizontally */
+  //gap: 5%;
+}
+.row{
+  display:inline-flex;
+}
+
+.card-header1 {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  text-align: center;   
+}
+
+.card-body {
+  text-align: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-size: cover;
+}

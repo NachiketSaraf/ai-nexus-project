@@ -11,7 +11,6 @@ export class CategoryComponent implements OnInit {
 
   categories: string[] = [];
   selectedCategory: string = '';
-
   cards!: any[]; // Array to store card data
   constructor(private categoryService: CategoryService, private cardService: CardService) { }
 
@@ -24,9 +23,8 @@ export class CategoryComponent implements OnInit {
       },
       complete: () => {
       }
-    }
-    )
-    this.selectedCategory = category;
+      })
+
   }
  
   ngOnInit(): void {
@@ -35,7 +33,10 @@ export class CategoryComponent implements OnInit {
     });
 
     this.fetchCard("All");
-  }
+
+  } 
+  
+
 }
 
 

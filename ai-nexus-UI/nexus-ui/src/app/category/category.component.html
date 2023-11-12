@@ -1,17 +1,6 @@
-
+<div class="name">Category</div>
 <div class="category-box">
-  <div class="name">
-    <h1>Categorys</h1>
-  </div>
-</div>
-<div class="category-box">
-  <button *ngFor="let category of categories" (click)="fetchCard(category)"
-    [style.background-color]="selectedCategory === category ? 'rgb(8, 154, 8)' : ''">
-    {{ category }}
-  </button>
-</div>
-<br><br>
-<hr color="#E01C48" width="40%">
+  <button *ngFor="let category of categories" (click)="fetchCard(category)">{{ category }}</button>
 
 <div class="category-box">
   <div class="tool-name">
@@ -19,27 +8,43 @@
   </div>
 </div>
 
-<div class="about-tool">
-  <div class="cat-name">{{selectedCategory}}</div>
-  <div class="tool-count">No of tools: {{cards.length}}</div>
-</div>
-
-
-<div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
+<!-- <div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
   <ng-container *ngFor="let item of cards">
     <mat-card class="example-card" fxFlex="33.33%" fxFlex.xs="100%">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{ item.toolName }}</mat-card-title>
+       
+        <mat-card-title> {{ item.toolName }}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="{{ item.toolImage }}" alt="{{ item.toolName }}">
+      <img mat-card-image src="{{ item.toolImage }}" alt="{{ item.toolName }}" >
       <mat-card-content>
         <p>{{ item.toolDescription }}</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button class="custom-button" color="accent"></button>
-        <a mat-raised-button color="#" href="/full-tool-page/{{item.toolName}}">View</a>
+        <a mat-button href="/full-tool-page/{${item.toolName}}">View</a>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div> -->
+<div class="card-structure">
+<div class="card" fxLayout="row wrap" fxLayout.xs="column">
+  <ng-container *ngFor="let item of cards">
+    <mat-card class="card-body" fxFlex="33.33%" fxFlex.xs="100%">
+      <mat-card-header>
+       <!-- // <div mat-card-avatar class="example-header-image"></div> -->
+       <div class="name">
+       <mat-card-title> {{ item.toolName }}</mat-card-title>
+      </div>
+      </mat-card-header>
+      <img mat-card-image src="{{ item.toolImage }}" alt="{{ item.toolName }}" class="img" >
+      
+      <mat-card-content>
+        <p>{{ item.toolDescription }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button href="/full-tool-page/{${item.toolName}}" class="custom-button">View</a>
       </mat-card-actions>
     </mat-card>
   </ng-container>
 </div>
+</div>
+ 
