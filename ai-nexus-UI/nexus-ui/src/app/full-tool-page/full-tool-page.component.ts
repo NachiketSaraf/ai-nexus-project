@@ -19,8 +19,8 @@ export class FullToolPageComponent implements OnInit {
       console.log(this.toolname);
 
     })
-    getTool(this.toolname : String): void{
-      this.toolService.getTool(this.toolname).subscribe({
+    getTool(this.toolname , String); void{
+      this:this.toolService.getTool(this.toolname).subscribe({
         next: (data: any) => {
           console.log(data);
           this.toolDetail = data;
@@ -28,7 +28,7 @@ export class FullToolPageComponent implements OnInit {
         complete: () => {
   
         }
-      }
+      })
     }
 
   }
@@ -42,3 +42,7 @@ export class FullToolPageComponent implements OnInit {
 
 }
 
+
+function getTool(toolname: string, String: StringConstructor) {
+  throw new Error('Function not implemented.');
+}

@@ -13,7 +13,7 @@ import { CardComponent } from './card/card.component';
 import { CardService } from './service/card.service';
 import { AiToolsComponent } from './ai-tools/ai-tools.component';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+import {  MatCardModule } from '@angular/material/card';
 
 import { HomeComponent } from './home/home.component';
 
@@ -46,10 +46,9 @@ import { RecommendedComponent } from './recommended/recommended.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule,
-
-    // MatIconModule
-  BrowserAnimationsModule
+    MatCardModule
+    
+ 
 
   ],
   providers: [CategoryService, CardService],
