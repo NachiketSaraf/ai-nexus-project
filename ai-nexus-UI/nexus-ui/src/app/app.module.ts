@@ -37,6 +37,7 @@ import { RecommendedComponent } from './recommended/recommended.component';
     TrendingComponent,
     RecommendedComponent,
     
+    
 
   ],
   imports: [
