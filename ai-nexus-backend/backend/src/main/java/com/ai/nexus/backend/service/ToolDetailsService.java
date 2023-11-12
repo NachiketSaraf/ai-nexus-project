@@ -9,20 +9,104 @@ import jakarta.transaction.Transactional;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617cd0a (discarded tool card)
+=======
+>>>>>>> 4823e7a (discarded tool card)
+=======
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
+>>>>>>> b9fddfc (New api to get tools with trending and recommended)
+=======
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+<<<<<<< HEAD
+=======
+import org.springframework.stereotype.Service;
+
+=======
+import org.springframework.stereotype.Service;
+
+>>>>>>> c9b064d (discarded tool card)
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 758d6d9 (discarded tool card)
+=======
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import java.util.*;
+>>>>>>> e8fed01 (New api to get tools with trending and recommended)
+=======
+>>>>>>> 130f04f (discarded tool card)
+<<<<<<< HEAD
+>>>>>>> 617cd0a (discarded tool card)
+=======
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
+>>>>>>> b9fddfc (New api to get tools with trending and recommended)
+=======
+>>>>>>> 130f04f (discarded tool card)
+=======
+>>>>>>> 1cb9fa4 (New api to get tools with trending and recommended)
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 
 @Service
 public class ToolDetailsService {
     @Autowired
     private  ToolDetailsRepository toolDetailsRepository;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 57b28d6 (discarded tool card)
+=======
+>>>>>>> 617cd0a (discarded tool card)
+=======
+>>>>>>> 4823e7a (discarded tool card)
+=======
+=======
+=======
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
     @Autowired
     private CategoryRepository categoryRepository;
     @Transactional
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     public List<ToolDetails> createToolDetails(List<ToolDetails> toolDetailsList) {
+=======
+    public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
+>>>>>>> 617cd0a (discarded tool card)
+=======
+    public List<ToolDetails> insertToolDetails(List<ToolDetails> toolDetailsList) {
+>>>>>>> 4823e7a (discarded tool card)
+=======
+    public List<ToolDetails> createToolDetails(List<ToolDetails> toolDetailsList) {
+>>>>>>> 304d7ba (updated to get all card)
         List<ToolDetails> savedToolDetails = new ArrayList<>();
 
         for (ToolDetails toolDetails : toolDetailsList) {
@@ -44,9 +128,42 @@ public class ToolDetailsService {
 
         return savedToolDetails;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     public List<ToolDetails> updateToolImages(List<Map<String, String>> toolUpdates) {
         List<ToolDetails> updatedTools = new ArrayList<>();
 
+=======
+
+    public String updateToolImages(List<Map<String, String>> toolUpdates) {
+>>>>>>> 57b28d6 (discarded tool card)
+=======
+    public List<ToolDetails> updateToolImages(List<Map<String, String>> toolUpdates) {
+        List<ToolDetails> updatedTools = new ArrayList<>();
+
+>>>>>>> b897d30 (discarded tool card)
+=======
+
+    public String updateToolImages(List<Map<String, String>> toolUpdates) {
+>>>>>>> 617cd0a (discarded tool card)
+=======
+    public List<ToolDetails> updateToolImages(List<Map<String, String>> toolUpdates) {
+        List<ToolDetails> updatedTools = new ArrayList<>();
+
+>>>>>>> 8f71bd5 (discarded tool card)
+=======
+
+    public String updateToolImages(List<Map<String, String>> toolUpdates) {
+>>>>>>> 4823e7a (discarded tool card)
+=======
+    public List<ToolDetails> updateToolImages(List<Map<String, String>> toolUpdates) {
+        List<ToolDetails> updatedTools = new ArrayList<>();
+
+>>>>>>> 3c85d0b (discarded tool card)
         for (Map<String, String> toolUpdate : toolUpdates) {
             String toolName = toolUpdate.get("toolName");
             String toolImage = toolUpdate.get("toolImage");
@@ -55,6 +172,12 @@ public class ToolDetailsService {
                 ToolDetails tool = toolDetailsRepository.findByToolName(toolName);
                 if (tool != null) {
                     tool.setToolImage(toolImage);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                     updatedTools.add(toolDetailsRepository.save(tool));
                 }
             }
@@ -63,6 +186,68 @@ public class ToolDetailsService {
         return updatedTools;
     }
 
+<<<<<<< HEAD
+>>>>>>> 758d6d9 (discarded tool card)
+=======
+>>>>>>> a1205b5 (discarded tool card)
+=======
+                    toolDetailsRepository.save(tool);
+                } else {
+                    return "Tool with name '" + toolName + "' not found.";
+=======
+                    updatedTools.add(toolDetailsRepository.save(tool));
+>>>>>>> b897d30 (discarded tool card)
+                }
+            }
+        }
+
+        return updatedTools;
+    }
+
+>>>>>>> c9b064d (discarded tool card)
+>>>>>>> 57b28d6 (discarded tool card)
+=======
+>>>>>>> 8128aaf (discarded tool card)
+=======
+                    toolDetailsRepository.save(tool);
+                } else {
+                    return "Tool with name '" + toolName + "' not found.";
+=======
+                    updatedTools.add(toolDetailsRepository.save(tool));
+>>>>>>> 8f71bd5 (discarded tool card)
+                }
+            }
+        }
+
+        return updatedTools;
+    }
+
+>>>>>>> 130f04f (discarded tool card)
+>>>>>>> 617cd0a (discarded tool card)
+=======
+>>>>>>> 52caf26 (discarded tool card)
+=======
+                    toolDetailsRepository.save(tool);
+                } else {
+                    return "Tool with name '" + toolName + "' not found.";
+=======
+                    updatedTools.add(toolDetailsRepository.save(tool));
+>>>>>>> 3c85d0b (discarded tool card)
+                }
+            }
+        }
+
+        return updatedTools;
+    }
+
+>>>>>>> c9b064d (discarded tool card)
+>>>>>>> 4823e7a (discarded tool card)
+=======
+<<<<<<< HEAD
+>>>>>>> c9b064d (discarded tool card)
+=======
+>>>>>>> 9ea63d0f61b01d9abd32d4a5a9355b40197e96da
+>>>>>>> 9b189274921630aa7ecf29b36c938ddd0bec19f3
 
     public List<ToolDetails> getAllToolDetails() {
         return toolDetailsRepository.findAll();
@@ -81,6 +266,12 @@ public class ToolDetailsService {
         ToolDetails existingTool = toolDetailsRepository.findById(toolId)
                 .orElseThrow(() -> new ResourceNotFoundException("Tool not found with id: " + toolId));
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 52caf26 (discarded tool card)
         // Update all fields
         existingTool.setToolName(updatedToolDetails.getToolName());
         existingTool.setToolImage(updatedToolDetails.getToolImage());
@@ -92,6 +283,10 @@ public class ToolDetailsService {
 
         return toolDetailsRepository.save(existingTool);
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b9fddfc (New api to get tools with trending and recommended)
 
     public List<ToolDetails> getToolByTag(String toolTag) {
         List<ToolDetails> existingTool =  toolDetailsRepository.findByToolTag(toolTag);
@@ -113,6 +308,11 @@ public class ToolDetailsService {
         List<ToolDetails> ans = selectedTool.stream().toList();
         return  ans;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 52caf26 (discarded tool card)
+=======
+>>>>>>> b9fddfc (New api to get tools with trending and recommended)
 //
 //    public Category findCategoryByName(String categoryName) {
 //        return categoryRepository.findByCategoryName(categoryName);
@@ -121,6 +321,12 @@ public class ToolDetailsService {
 //    public ToolDetails saveToolDetails(ToolDetails toolDetails) {
 //        return toolDetailsRepository.save(toolDetails);
 //    }
+<<<<<<< HEAD
+>>>>>>> e8fed01 (New api to get tools with trending and recommended)
+=======
+>>>>>>> 8128aaf (discarded tool card)
+=======
+>>>>>>> 52caf26 (discarded tool card)
 //
 //    public ToolDetails createToolDetail(ToolDetails toolDetail) {
 //        return toolDetailsRepository.save(toolDetail);

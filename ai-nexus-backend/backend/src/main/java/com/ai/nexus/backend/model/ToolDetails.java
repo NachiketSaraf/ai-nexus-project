@@ -39,7 +39,10 @@ public class ToolDetails {
 
     @Column(name = "tool_tag", columnDefinition = "text")
     private String toolTag;
+    @Column(name = "tool_tag", columnDefinition = "text")
+    private String toolTag;
 
     @Column(name = "tool_description", columnDefinition = "text")
     private String toolDescription;
 }
+
