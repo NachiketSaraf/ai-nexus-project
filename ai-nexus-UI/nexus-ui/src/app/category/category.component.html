@@ -4,6 +4,7 @@
     <h1>Categorys</h1>
   </div>
 </div>
+<!-- display category  -->
 <div class="category-box">
   <button *ngFor="let category of categories" (click)="fetchCard(category)"
     [style.background-color]="selectedCategory === category ? 'rgb(8, 154, 8)' : ''">
