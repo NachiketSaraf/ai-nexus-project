@@ -13,5 +13,4 @@ selectedButton: string = ''; // Variable to keep track of the selected button
   selectButton(button: string): void {
     this.selectedButton = button;
   }
-
 }
