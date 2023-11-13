@@ -16,7 +16,7 @@ export class CategoryComponent implements OnInit {
 
 
   fetchCard(category: string): void {
-    this.cardService.getCard(category).subscribe({
+    this.cardService['getCards'](category).subscribe({
       next: (data: any) => {
         console.log(data);
         this.cards = data;
