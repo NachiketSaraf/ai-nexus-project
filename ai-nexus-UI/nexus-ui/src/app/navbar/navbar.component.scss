@@ -30,9 +30,20 @@
   
   .custom-button:hover {
     background-color: transparent; 
-    color: bisque;
+    color:rgb(17, 172, 17);
     font-weight: bolder;
+  } 
+  
+  .custom-button {
+    position: relative;
   }
-//   .search{
-//     flex:1 1 auto ;
-//   }
+  
+  .custom-button.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust this value to control the distance between the text and the border */
+    width: 100%;
+    height: 2px;
+    background-color: rgb(17, 172, 17);
+  }

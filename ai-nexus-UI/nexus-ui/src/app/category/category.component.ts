@@ -9,8 +9,8 @@ import { CardService } from '../service/card.service';
 })
 export class CategoryComponent implements OnInit {
 
-  categories!: string[];
-  selectCategory: string ='' ;
+  categories: string[] = [];
+  selectedCategory: string = '';
 
   cards!: any[]; // Array to store card data
   constructor(private categoryService: CategoryService, private cardService: CardService) { }
@@ -23,20 +23,12 @@ export class CategoryComponent implements OnInit {
         this.cards = data;
       },
       complete: () => {
-
-
       }
     } 
     )
-
-
-  fetchCard(category: string): void {
     this.selectedCategory = category;
-
-    } 
-
-    this.selectCategory = category;
- }
+  }
+ 
   ngOnInit(): void {
     this.categoryService.getCategoryNames().subscribe((data: string[]) => {
       this.categories = data;
