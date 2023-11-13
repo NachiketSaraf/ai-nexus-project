@@ -14,13 +14,13 @@ export class FullToolPageComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
+    this.route.params.subscribe((params: { [x: string]: string; }) => {
       this.toolname = params?.["toolname"]
       console.log(this.toolname);
 
     })
-    getTool(this.toolname , String); void{
-      this:this.toolService.getTool(this.toolname).subscribe({
+    getTool(this.toolname : String): void{
+      this.toolService.getTool(this.toolname).subscribe({
         next: (data: any) => {
           console.log(data);
           this.toolDetail = data;

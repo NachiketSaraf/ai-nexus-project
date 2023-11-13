@@ -23,8 +23,9 @@ export class CategoryComponent implements OnInit {
       },
       complete: () => {
       }
-      })
-
+    } 
+    )
+    this.selectedCategory = category;
   }
  
   ngOnInit(): void {
@@ -35,8 +36,6 @@ export class CategoryComponent implements OnInit {
     this.fetchCard("All");
 
   } 
-  
-
 }
 
 

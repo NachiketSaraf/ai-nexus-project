@@ -8,26 +8,27 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root'
 })
 export class CardService {
+  [x: string]: any;
   cards: any[] = [];
   private baseUrl = 'http://localhost:8080'; // Replace with your backend URL
+  constructor(private http: HttpClient) {} 
 
-  constructor(private http: HttpClient) { }
+   getCard(categoryName :string ): Observable<any>{
+      const url = `${this.baseUrl}/api/tool-details/${categoryName}`;
+      console.log(url);
+      return this.http.get(url);
+
+    }
 
 
-  getCard(categoryName: string): Observable<any> {
-    const url = `${this.baseUrl}/api/tool-details/${categoryName}`;
-    console.log(url);
-    return this.http.get(url);
-
-  }
+    
+    setCards(cards: any[]) {
+      this.cards = cards;
+    }
   
-setCards(cards: any[]) {
-  this.cards = cards;
-}
-
-getCards(): any[] {
-  return this.cards;
-}
+    getCards(): any[] {
+      return this.cards;
+    }
+  }
 
 
-}
