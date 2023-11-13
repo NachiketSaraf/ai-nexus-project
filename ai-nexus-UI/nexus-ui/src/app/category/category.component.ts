@@ -12,7 +12,7 @@ export class CategoryComponent implements OnInit {
   categories: string[] = [];
   selectedCategory: string = '';
 
-  cards!: any[]; // Array to store card data
+  cards!: any[]; // Array to store card data from api
   constructor(private categoryService: CategoryService, private cardService: CardService) { }
 
 
