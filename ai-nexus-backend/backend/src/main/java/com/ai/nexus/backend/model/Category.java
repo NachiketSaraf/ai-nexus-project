@@ -19,15 +19,4 @@ public class Category {
 
     @Column(name = "category_name")
     private String categoryName;
-
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "category_id")
-//    private int categoryId;
-//
-//    @Column(name = "category_name")
-//    private String categoryName;
-
-
 }

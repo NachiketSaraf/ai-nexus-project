@@ -1,5 +1,6 @@
 package com.ai.nexus.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,10 +39,9 @@ public class ToolDetails {
 
     @Column(name = "tool_tag", columnDefinition = "text")
     private String toolTag;
-    @Column(name = "tool_tag", columnDefinition = "text")
-    private String toolTag;
 
     @Column(name = "tool_description", columnDefinition = "text")
     private String toolDescription;
 }
+
 
