@@ -30,7 +30,7 @@ export class FullToolPageComponent implements OnInit {
     //     }
     //   }
     // }
-
+    
   }
   // setSelectedToolName(setSelectedToolName : string){
   //   this.toolname = setSelectedToolName;
