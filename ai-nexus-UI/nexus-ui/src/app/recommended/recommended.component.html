@@ -1,5 +1,23 @@
-<div *ngFor="let card of recommendedCards">
-    <div>{{ card.title }}</div>
-    <div>{{ card.description }}</div>
-    <!-- Add more HTML to display card details -->
+<!-- <div *ngFor="let card of recommendedCards">
+    <div>{{ card.toolName }}</div>
+    <div>{{ card.toolDescription }}</div>
+    Add more HTML to display card details -->
+  <!-- </div> --> 
+  <div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
+    <ng-container *ngFor="let item of recommendedCards">
+      <div class="card">
+        <div class="card-header1">
+          {{item.toolName}}
+        </div>
+        <div class="card-body">
+          <img src="{{item.toolImage}}"
+            alt="Card Image">
+          <p>{{ item.toolDescription }}</p>
+          <mat-card-actions>
+            <button mat-button class="custom-button" color="accent"></button>
+            <a mat-raised-button color="#" href="/full-tool-page/{{item.toolName}}">View</a>
+          </mat-card-actions>
+        </div>
+      </div>
+    </ng-container>
   </div>
