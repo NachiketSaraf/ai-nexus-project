@@ -15,6 +15,8 @@ export class FullToolPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
+      console.log("hello");
+      
       this.toolname = params?.["toolname"]
       console.log(this.toolname);
 
