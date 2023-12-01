@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FullToolPageService } from '../service/full-tool-page.service';
 import { ActivatedRoute } from '@angular/router';
+import { FullToolPageService } from '../service/full-tool-page.service';
 
 @Component({
   selector: 'app-full-tool-page',
@@ -9,38 +9,29 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FullToolPageComponent implements OnInit {
   toolDetail: any = {};
-  toolname: string = '';
-  constructor(private toolService: FullToolPageService,
-    private route: ActivatedRoute) { }
+  toolName: string = '';
+
+  constructor(private toolService: FullToolPageService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      console.log("hello");
+    this.route.params.subscribe((params: { [key: string]: string }) => {
+      this.toolName = params?.['toolName'];
+      console.log(this.toolName);
       
-      this.toolname = params?.["toolname"]
-      console.log(this.toolname);
-
-    })
-    // getTool(this.toolname : String): void{
-    //   this.toolService.getTool(this.toolname).subscribe({
-    //     next: (data: any) => {
-    //       console.log(data);
-    //       this.toolDetail = data;
-    //     },
-    //     complete: () => {
-  
-    //     }
-    //   }
-    // }
-    
+      // Now that you have the toolName, you can fetch the tool details
+      this.fetchToolDetail();
+    });
   }
-  // setSelectedToolName(setSelectedToolName : string){
-  //   this.toolname = setSelectedToolName;
-  // }
 
-  // fetchToolDetail() {
-
-
-
+  fetchToolDetail() {
+    this.toolService.getTool(this.toolName).subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.toolDetail = data;
+      },
+      error: (error) => {
+        console.error(error);
+      }
+    });
+  }
 }
-

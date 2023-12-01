@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: "category", component: CategoryComponent },
   // { path: "ai-tools/card/:category", component: CardComponent },
   { path: "ai-tools", component: AiToolsComponent },
-  { path: "full-tool-page", component: FullToolPageComponent }
+  { path: 'full-tool-page/:toolName', component: FullToolPageComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

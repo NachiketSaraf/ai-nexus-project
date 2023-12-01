@@ -1,26 +1,37 @@
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
-<div><h1>full-tool-page works!</h1></div>
+<div class="tool-details-container">
+  <h2>{{ toolDetail.toolName }}</h2>
+  
+  <div class="tool-image">
+    <img [src]="toolDetail.toolImage" alt="{{ toolDetail.toolName }} Image">
+  </div>
+
+  <div class="tool-features">
+    <h3>Features</h3>
+    <p>{{ toolDetail.toolFeatures }}</p>
+  </div>
+
+  <div class="tool-website-link">
+    <h3>Website Link</h3>
+    <a [href]="toolDetail.toolWebsiteLink" target="_blank">{{ toolDetail.toolWebsiteLink }}</a>
+  </div>
+
+  <div class="tool-demo-video-links">
+    <h3>Demo Video Links</h3>
+    <p>{{ toolDetail.toolDemoVideoLinks }}</p>
+  </div>
+
+  <div class="tool-category">
+    <h3>Category</h3>
+    <p>{{ toolDetail.category.categoryName }}</p>
+  </div>
+
+  <div class="tool-tag">
+    <h3>Tag</h3>
+    <p>{{ toolDetail.toolTag }}</p>
+  </div>
+
+  <div class="tool-description">
+    <h3>Description</h3>
+    <p>{{ toolDetail.toolDescription }}</p>
+  </div>
+</div>

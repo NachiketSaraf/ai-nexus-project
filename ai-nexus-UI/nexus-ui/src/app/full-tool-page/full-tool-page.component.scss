@@ -1,4 +1,44 @@
-h1 {
-    align-self: center ;
-    color: blue;
+
+.tool-details-container {
+  max-width: 600px;
+  margin: 90px auto 20px; /* Adjust the top margin to leave space below the navbar */
+  padding: 20px;
+}
+.tool-details-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tool-features,
+.tool-website-link,
+.tool-demo-video-links,
+.tool-category,
+.tool-tag,
+.tool-description {
+  margin-top: 20px;
+}
+
+.tool-features h3,
+.tool-website-link h3,
+.tool-demo-video-links h3,
+.tool-category h3,
+.tool-tag h3,
+.tool-description h3 {
+  color: #333;
+}
+
+.tool-features p,
+.tool-demo-video-links p,
+.tool-tag p,
+.tool-description p {
+  color: #555;
+}
+
+.tool-website-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.tool-website-link a:hover {
+  text-decoration: underline;
 }
