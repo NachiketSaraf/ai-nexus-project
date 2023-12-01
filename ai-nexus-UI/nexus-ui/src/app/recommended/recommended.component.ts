@@ -14,9 +14,13 @@ export class RecommendedComponent implements OnInit {
 
   ngOnInit(): void {
     const toolTag = 'recommended'; // Define the tag you want to fetch
-    this.recommendedservice.getRecommendedCards(toolTag)
-      .subscribe((data: any) => {
+    this.recommendedservice.getRecommendedCards(toolTag).subscribe({
+      next: (data: any) => {
+        // console.log(data);
         this.recommendedCards = data;
+      },
+      complete: () => {
+      }
       });
   }
 

@@ -11,6 +11,6 @@ export class TrendingService {
   constructor(private http: HttpClient) { }
 
   getTrendingCards(toolTag: string): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/api/tool-details/by-tag?tag=${toolTag}`);
+    return this.http.get<any>(`${this.baseUrl}/api/tool-details/by-tag/${toolTag}`);
   }
 }

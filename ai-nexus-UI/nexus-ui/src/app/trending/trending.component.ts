@@ -16,6 +16,8 @@ export class TrendingComponent implements OnInit {
     this.trendingservice.getTrendingCards(toolTag)
       .subscribe((data: any) => {
         this.trendingCards = data;
+        console.log(data);
+        
       });
   }
 }
