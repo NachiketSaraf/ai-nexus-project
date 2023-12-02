@@ -44,3 +44,22 @@
 .tool-website-link a:hover {
   text-decoration: underline;
 }
+.fancy-button {
+  background-color: #e01c48;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: medium;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.fancy-button:hover {
+  background-color: #96162a;
+}
+
+.tool-details-container .fancy-button {
+  margin-top: 10px;
+}
