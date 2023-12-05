@@ -45,6 +45,8 @@ public class ToolDetailsController {
     public List<ToolDetails> getToolByTag(@PathVariable String toolTag){
         return toolDetailsService.getToolByTag(toolTag);
     }
+    @Operation(summary = "To get tool by id "
+            ,description = "")
     @GetMapping("by-id/{id}")
     public ToolDetails getToolDetailsById(@PathVariable Long id) {
         Optional<ToolDetails> toolDetails = toolDetailsService.getToolDetailById(id);
