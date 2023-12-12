@@ -17,18 +17,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 2%;
+    color: white;
   }
   
   mat-card-actions {
     color: #E01C48;
-    background-color: #3a3b3d;
+    // background-color: black;
     display: flex;
     justify-content: flex-end;
   }
   
   a.mat-button {
     text-decoration: none;
-    color: #007bff;
+    color: white;
   }
   
   a.mat-button:hover {
@@ -59,7 +60,7 @@
   
   .card {
     width: 300px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
     margin: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -80,7 +81,7 @@
   }
   
   .card-header1 {
-    background-color: #007BFF;
+    background-color: #424242;
     color: white;
     padding: 10px;
     text-align: center;
@@ -89,7 +90,7 @@
   /* component-name.component.css */
   
   .custom-button {
-    background-color: #3A3B3D;
+    background-color: #424242;
     /* Background color */
     color: white;
     /* Text color */
@@ -103,7 +104,7 @@
     /* Change cursor on hover */
   }
   
-  /* Hover effect */
+  // /* Hover effect */
   .custom-button:hover {
     background-color: #0056b3;
     /* Change background color on hover */
