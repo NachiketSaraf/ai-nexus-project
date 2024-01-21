@@ -1,0 +1,49 @@
+
+.example-spacer{
+    margin-left: 35%;
+}
+.mat-toolbar{
+    //background-color: rgb(21, 142, 229);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #161716; /* Adjust the background color as needed */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Adjust the padding as needed */
+    z-index: 100;}
+.name{
+    color: #E01C48;
+    margin-left: 5%;
+}
+.custom-button {
+    background-color: transparent; 
+    // color: rgb(251, 249, 249); 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: medium;
+    font-family: Georgia, serif;
+    
+  }
+  
+  .custom-button:hover {
+    background-color: transparent; 
+    color:rgb(17, 172, 17);
+    font-weight: bolder;
+  } 
+  
+  .custom-button {
+    position: relative;
+  }
+  
+  .custom-button.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust this value to control the distance between the text and the border */
+    width: 100%;
+    height: 2px;
+    background-color: rgb(17, 172, 17);
+  }

@@ -1,0 +1,176 @@
+.about-tool {
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke;
+  font-size: medium;
+  margin-left: 1px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.cat-name {
+  margin-left: 30px;
+}
+
+.tool-count {
+  margin-right: 30px;
+}
+
+//category
+.category-box {
+  margin-top: 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+  margin-left: 30px;
+  justify-content: center;
+  /* Center-align buttons horizontally */
+  gap: 20px;
+  /* Add space between buttons */
+}
+
+.category-box button {
+  background-color: #3a3b3d;
+  /* Button background color */
+  color: #fff;
+  /* Text color */
+  padding: 10px 20px;
+  /* Padding around text */
+  border: none;
+  /* Remove button border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.category-box button:hover {
+  background-color: #5f8829;
+  // background-color: rgb(8, 154, 8);
+  /* Hover background color */
+
+}
+.tool-name{
+  color: #ffffff;
+  font-size: xx-large;
+}
+
+.name {
+  margin-top: 60px;
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+  font-family: Georgia, serif;
+}
+
+.example-card {
+  max-width: 300px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Adjust as needed for horizontal spacing */
+  align-items: flex-start;
+  /* Adjust as needed for vertical alignment */
+  margin: -8px;
+  /* Adjust as needed for card spacing */
+}
+
+.mat-card {
+  flex: 0 0 calc(33.33% - 16px);
+  /* Adjust as needed for card width and margin */
+  margin: 8px;
+  /* Adjust as needed for card spacing */
+}
+
+/* Add more CSS styles for card appearance as needed */
+//cards
+.card {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.example-card {
+  width: 300px;
+  margin: 16px;
+  color: #212223;
+  //box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.example-header-image {
+  // background-image: url('your-avatar-image-url.jpg');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+}
+
+.mat-card-image {
+  max-width: 100;
+  max-height: 50px;
+  /* Set the max height for the card image */
+}
+
+.mat-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+mat-card-header {
+  color: white;
+}
+
+mat-card-content {
+  color: white;
+  font-size: 14px;
+  width: auto;
+  height: 80px;
+  margin: 8px 0;
+}
+
+mat-card-actions {
+  color: #E01C48;
+  background-color: #3a3b3d;
+  display: flex;
+  justify-content: flex-end;
+}
+
+a.mat-button {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a.mat-button:hover {
+  text-decoration: underline;
+  /* Underline the link on hover */
+}
+
+mat-stroked-button {
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+
+.custom-button {
+  align-items: center;
+  background-color: transparent;
+  // color: rgb(251, 249, 249); 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: medium;
+  font-family: Georgia, serif;
+  display: table-cell;
+  max-width: 600px;
+}
