@@ -1,18 +1,14 @@
 <mat-toolbar>
-  <span class="name">AI Nexus</span>
-
-  <span class="example-spacer"></span>
-  <button mat-button class="custom-button" routerLink="" [ngClass]="{'active': selectedButton === 'home'}"
+    <span class="name">AI Nexus</span>
+    <span class="example-spacer"></span>
+    <button mat-button class="custom-button" routerLink="" 
+    [ngClass]="{'active': selectedButton === 'home'}"
     (click)="selectButton('home')">Home</button>
-
-  <button mat-button class="custom-button" routerLink="./ai-tools" [ngClass]="{'active': selectedButton === 'ai-tools'}"
+    
+    <button mat-button class="custom-button" routerLink="./ai-tools" 
+    [ngClass]="{'active': selectedButton === 'ai-tools'}"
     (click)="selectButton('ai-tools')">Ai-Tool</button>
-
-  <button mat-button class="custom-button" routerLink="" [ngClass]="{'active': selectedButton === 'News letter'}"
-    (click)="selectButton('News letter')">News letter</button>
-
-  <!-- <button mat-icon-button class="search" routerLink="./ai-tools" (click)="openSearch()">
-    <mat-icon>search</mat-icon>
-  </button> -->
-
+    <!-- <button mat-icon-button  class="search" (click)="openSearch()">
+        <mat-icon>search</mat-icon>
+      </button> -->
 </mat-toolbar>
