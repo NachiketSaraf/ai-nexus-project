@@ -75,11 +75,12 @@ display: none;
   position: fixed;
   top: 0;
   right: 0;
+  margin-right: 2%;
  
 }
 
 .dropdown-content {
-  display: block;
+  display: none;
   position: absolute;
   background-color: rgb(41, 44, 41);
   color: white;
@@ -117,6 +118,10 @@ a:hover {
 
 .menu-button:hover .dropdown-content {
   display: block;
+}
+.name{
+  color: #E01C48;
+  margin-left: 3%;
 }
 
 }

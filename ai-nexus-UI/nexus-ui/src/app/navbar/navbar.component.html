@@ -11,4 +11,17 @@
     <!-- <button mat-icon-button  class="search" (click)="openSearch()">
         <mat-icon>search</mat-icon>
       </button> -->
+
+      <!-- Menu button for mobile -->
+   
+<div class="menu-button" [class.show-dropdown]="isDropdownVisible" (click)="toggleDropdown()">
+  <span> &#9776;</span>
+  <div class="dropdown-content">
+      <ul>
+          <li><a mat-button routerLink="" [ngClass]="{'active': selectedButton === 'home'}" (click)="selectButton('home'); hideDropdown()">Home</a></li>
+          <li><a mat-button routerLink="./ai-tools" [ngClass]="{'active': selectedButton === 'ai-tools'}" (click)="selectButton('ai-tools'); hideDropdown()">Ai-Tool</a></li>
+      </ul>
+  </div>
+</div>
+
 </mat-toolbar>
