@@ -1,13 +1,16 @@
-
 .tool-details-container {
   color: #E01C48;
-  max-width: 600px;
-  margin: 90px auto 20px; /* Adjust the top margin to leave space below the navbar */
+  max-width: 800px; /* Increased max-width for a wider container */
+  margin: 90px auto 20px;
   padding: 20px;
+  display: flex; /* Use Flexbox to arrange items */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if the container is too narrow */
 }
+
 .tool-details-container img {
   max-width: 100%;
   height: auto;
+  margin-right: 20px; /* Add margin to the right of the image for spacing */
 }
 
 .tool-features,
@@ -17,6 +20,7 @@
 .tool-tag,
 .tool-description {
   color: #ffffff;
+  flex-basis: 100%; /* Each section takes up 100% of the width initially */
   margin-top: 20px;
 }
 
@@ -44,6 +48,7 @@
 .tool-website-link a:hover {
   text-decoration: underline;
 }
+
 .fancy-button {
   background-color: #e01c48;
   color: #fff;
@@ -60,6 +65,15 @@
   background-color: #96162a;
 }
 
-.tool-details-container .fancy-button {
+ .fancy-button {
   margin-top: 10px;
+}
+.tool-demo-video-links {
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.tool-demo-video-links iframe {
+  width: 100%; /* Make the embedded video responsive */
+  height: 400px; /* Set a fixed height or adjust as needed */
 }
