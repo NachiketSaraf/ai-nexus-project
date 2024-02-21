@@ -1,10 +1,12 @@
 .card{
+  
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
 }
 .card:hover {
   transform: scale(1.2);
 }
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -25,19 +27,18 @@
   justify-content: space-between;
   margin-top: 2%;
   color: white;
-  
 }
 
 mat-card-actions {
   color: #E01C48;
-  background-color: #424242;
+  // background-color: black;
   display: flex;
   justify-content: flex-end;
 }
 
 a.mat-button {
   text-decoration: none;
-  ;
+  color: white;
 }
 
 a.mat-button:hover {
@@ -67,15 +68,16 @@ mat-stroked-button {
 
 
 .card {
+  
   width: 300px;
-  border: none;
-  border-radius: 5px;
+  
   margin: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: inline;
 }
 
 .card-body {
+  border-radius: 20px;
   background-color: #424242;
   padding: 15px;
 }
@@ -112,7 +114,7 @@ mat-stroked-button {
   /* Change cursor on hover */
 }
 
-/* Hover effect */
+// /* Hover effect */
 .custom-button:hover {
   background-color: #0056b3;
   /* Change background color on hover */

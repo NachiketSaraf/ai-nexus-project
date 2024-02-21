@@ -6,12 +6,11 @@
   <div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
     <ng-container *ngFor="let item of recommendedCards">
       <div class="card">
-        <div class="card-header1">
-          {{item.toolName}}
-        </div>
         <div class="card-body">
-          <img src="{{item.toolImage}}"
-            alt="Card Image">
+          <div class="card-header1">
+            {{item.toolName}}
+          </div>
+          <img src="{{item.toolImage}}" alt="Card Image">
           <p>{{ item.toolDescription }}</p>
           <mat-card-actions>
             <a mat-raised-button color="#" [routerLink]="['/full-tool-page', item.toolName]">View</a>
@@ -19,4 +18,3 @@
         </div>
       </div>
     </ng-container>
-  </div>

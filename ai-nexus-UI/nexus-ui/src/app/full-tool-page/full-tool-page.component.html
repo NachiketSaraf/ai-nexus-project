@@ -27,7 +27,9 @@
 
   <div class="tool-demo-video-links">
     <h3>Demo Video</h3>
-    <p>{{ toolDetail.toolDemoVideoLinks }}</p>
+    <a [href]="toolDetail.toolDemoVideoLinks" target="_blank">
+      <button mat-button class="fancy-button">View video</button>
+    </a>
   </div>
 
 

@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable ,map } from 'rxjs';
+import { AppSettings } from '../AppSettings';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
   
-  private baseUrl = 'http://localhost:8080'; // Replace with your backend URL
+  private baseUrl = AppSettings.BACKEND_API ; // Replace with your backend URL
   
   constructor(private http: HttpClient) { }
   

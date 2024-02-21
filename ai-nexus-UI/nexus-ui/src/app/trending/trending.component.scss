@@ -1,10 +1,12 @@
 .card{
+  
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
 }
 .card:hover {
   transform: scale(1.2);
 }
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -66,15 +68,16 @@ mat-stroked-button {
 
 
 .card {
+  
   width: 300px;
-  border: none;
-  border-radius: 5px;
+  
   margin: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: inline;
 }
 
 .card-body {
+  border-radius: 20px;
   background-color: #424242;
   padding: 15px;
 }

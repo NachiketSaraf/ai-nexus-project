@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 import { Observable, tap } from 'rxjs';
+import { AppSettings } from '../AppSettings';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { Observable, tap } from 'rxjs';
 })
 export class CardService {
   cards: any[] = [];
-  private baseUrl = 'http://localhost:8080'; // Replace with your backend URL
+  private baseUrl = AppSettings.BACKEND_API ; // Replace with your backend URL
   constructor(private http: HttpClient) { }
 
 

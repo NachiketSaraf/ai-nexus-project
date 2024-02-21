@@ -32,8 +32,10 @@
       <mat-card-content>
         <p>{{ item.toolDescription }}</p>
       </mat-card-content>
+      
       <mat-card-actions>
-        <a mat-raised-button color="#" [routerLink]="['/full-tool-page', item.toolName]">View</a>
+        <a mat-raised-button style="background-color: #212121; color: #E01C48; border-radius: 12px; " 
+        [routerLink]="['/full-tool-page', item.toolName]">View</a>
       </mat-card-actions> 
     </mat-card>
   </ng-container>
