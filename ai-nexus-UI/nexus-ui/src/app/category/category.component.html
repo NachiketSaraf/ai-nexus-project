@@ -1,12 +1,12 @@
-
 <div class="category-box">
   <div class="name">
     Category
   </div>
 </div>
-<!-- display category  -->
+
+<!-- Display categories -->
 <div class="category-box">
-  <button *ngFor="let category of categories" (click)="fetchCard(category)"
+  <button *ngFor="let category of categories" (click)="onCategoryClick(category)"
     [style.background-color]="selectedCategory === category ? 'rgb(8, 154, 8)' : ''">
     {{ category }}
   </button>
@@ -14,22 +14,16 @@
 <br><br>
 <hr color="#E01C48" width="40%">
 
-<div class="category-box">
-  <div class="name">
-    Tools
-  </div>
-</div>
-
-<!-- to disply tool count  -->
+<!-- Display selected category and tool count -->
 <div class="about-tool">
-  <div class="cat-name">{{selectedCategory}}</div>
-  <div class="tool-count">No of tools: {{cards.length}}</div>
+  <div class="cat-name">{{ selectedCategory }}</div>
+  <div class="tool-count">No of tools: {{ sortedCard.length }}</div>
 </div>
 
-<!-- cards -->
+<!-- Display cards -->
 <div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
-  <ng-container *ngFor="let item of cards">
-    <mat-card class="example-card" fxFlex="33.33%" fxFlex.xs="100%">
+  <ng-container *ngIf="sortedCard.length > 0; else noCards">
+    <mat-card class="example-card" fxFlex="33.33%" fxFlex.xs="100%" *ngFor="let item of sortedCard">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{ item.toolName }}</mat-card-title>
@@ -44,3 +38,8 @@
     </mat-card>
   </ng-container>
 </div>
+
+<!-- No cards message -->
+<ng-template #noCards>
+  <div class="no-cards-message">No cards available for the selected category.</div>
+</ng-template>
