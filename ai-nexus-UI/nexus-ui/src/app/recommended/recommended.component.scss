@@ -17,6 +17,15 @@
   margin: -8px;
   /* Adjust as needed for card spacing */
 }
+@media (max-width: 767px) {
+  .card-container {
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0 10px;
+      /* Optional: Add padding for spacing */
+  }
+}
 
 
 /* Add more CSS styles for card appearance as needed */

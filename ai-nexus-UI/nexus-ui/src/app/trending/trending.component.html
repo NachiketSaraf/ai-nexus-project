@@ -6,7 +6,11 @@
           {{item.toolName}}
         </div>
         <img src="{{item.toolImage}}" alt="Card Image">
-        <p>{{ item.toolDescription }}</p>
+
+        <mat-card-content style="max-width: 100ch; overflow: hidden;">
+          <p>{{ item.toolDescription }}</p>
+        </mat-card-content>
+        
         <mat-card-actions>
           <a mat-raised-button color="#" [routerLink]="['/full-tool-page', item.toolName]">View</a>
         </mat-card-actions>

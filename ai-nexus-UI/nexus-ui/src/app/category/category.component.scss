@@ -85,7 +85,7 @@ img{
 }
 
 
-.card-container {
+.card-container { 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -94,6 +94,15 @@ img{
   /* Adjust as needed for vertical alignment */
   margin: -8px;
   /* Adjust as needed for card spacing */
+}
+@media (max-width: 767px) {
+  .card-container {
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0 10px;
+      /* Optional: Add padding for spacing */
+  }
 }
 
 .mat-card {

@@ -1,3 +1,3 @@
 export class AppSettings{
-    public static BACKEND_API = 'http://192.168.45.39:8080';
+    public static BACKEND_API = 'http://52.66.244.109:8080'; //aws
 }
