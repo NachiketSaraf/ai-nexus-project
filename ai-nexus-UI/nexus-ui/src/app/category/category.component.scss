@@ -92,14 +92,15 @@ img{
   /* Adjust as needed for horizontal spacing */
   align-items: flex-start;
   /* Adjust as needed for vertical alignment */
-  margin: -8px;
+  margin: 35px;
+ 
   /* Adjust as needed for card spacing */
 }
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .card-container {
       justify-content: center;
       align-items: center;
-      margin: 0;
+      margin: 25px;
       padding: 0 10px;
       /* Optional: Add padding for spacing */
   }

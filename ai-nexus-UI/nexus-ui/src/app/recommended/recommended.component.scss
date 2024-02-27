@@ -1,8 +1,17 @@
-.card{
-  
+.card {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2%;
+  color: white;
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
+  width: 300px;  
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  //display: inline;
 }
+
 .card:hover {
   transform: scale(1.2);
 }
@@ -14,7 +23,7 @@
   /* Adjust as needed for horizontal spacing */
   align-items: flex-start;
   /* Adjust as needed for vertical alignment */
-  margin: -8px;
+  margin: 70px;
   /* Adjust as needed for card spacing */
 }
 @media (max-width: 767px) {
@@ -29,15 +38,6 @@
 
 
 /* Add more CSS styles for card appearance as needed */
-//cards
-.card {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 2%;
-  color: white;
-}
-
 mat-card-actions {
   color: #E01C48;
   // background-color: black;
@@ -73,17 +73,18 @@ mat-stroked-button {
   font-family: Georgia, serif;
   display: table-cell;
   max-width: 600px;
-}
+  background-color: #424242;
+  /* Background color */
+  color: white;
+  /* Text color */
+  }
 
-
-.card {
   
-  width: 300px;
-  
-  margin: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: inline;
-}
+// /* Hover effect */
+.custom-button:hover {
+  background-color: #0056b3;
+  /* Change background color on hover */
+}  
 
 .card-body {
   border-radius: 20px;
@@ -106,25 +107,4 @@ mat-stroked-button {
   text-align: center;
 }
 
-/* component-name.component.css */
 
-.custom-button {
-  background-color: #424242;
-  /* Background color */
-  color: white;
-  /* Text color */
-  padding: 10px 20px;
-  /* Padding */
-  border: none;
-  /* Remove the border */
-  border-radius: 5px;
-  /* Rounded corners */
-  cursor: pointer;
-  /* Change cursor on hover */
-}
-
-// /* Hover effect */
-.custom-button:hover {
-  background-color: #0056b3;
-  /* Change background color on hover */
-}
