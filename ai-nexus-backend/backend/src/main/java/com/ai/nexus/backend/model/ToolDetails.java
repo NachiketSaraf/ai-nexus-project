@@ -42,6 +42,8 @@ public class ToolDetails {
 
     @Column(name = "tool_description", columnDefinition = "text")
     private String toolDescription;
+    @Column(name = "pricing_model",columnDefinition = "text")
+    private String pricingModel;
 }
 
 
