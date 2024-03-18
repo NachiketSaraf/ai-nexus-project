@@ -1,12 +1,14 @@
-.example-card{
+.example-card {
   border-radius: 20px;
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
 }
-.example-card:hover  {
+
+.example-card:hover {
   transform: scale(1.2);
 }
-img{
+
+img {
   align-self: center;
   height: 150px;
   width: 275px;
@@ -64,7 +66,8 @@ img{
   /* Hover background color */
 
 }
-.tool-name{
+
+.tool-name {
   color: #ffffff;
   font-size: xx-large;
 }
@@ -85,7 +88,7 @@ img{
 }
 
 
-.card-container { 
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -93,17 +96,28 @@ img{
   align-items: flex-start;
   /* Adjust as needed for vertical alignment */
   margin: 35px;
- 
+
   /* Adjust as needed for card spacing */
 }
+
 @media (max-width: 600px) {
   .card-container {
-      justify-content: center;
-      align-items: center;
-      margin: 25px;
-      padding: 0 10px;
-      /* Optional: Add padding for spacing */
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    padding: 0 10px;
+    /* Optional: Add padding for spacing */
   }
+}
+
+mat-card-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .mat-card {
@@ -164,11 +178,13 @@ mat-card-content {
 }
 
 mat-card-actions {
-  
+
   color: #E01C48;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
+
 
 a.mat-button {
   text-decoration: none;
@@ -198,4 +214,29 @@ mat-stroked-button {
   font-family: Georgia, serif;
   display: table-cell;
   max-width: 600px;
+}
+
+.no-cards-message {
+  color: white;
+  height: 535px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.free-tag {
+  border-radius: 15px;
+  font-weight: 500;
+  color: #E01C48;
+  margin-right: 115px;
+  padding: 6px 33px;
+  background-color: rgba(245, 245, 245, 0.925);
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+
+.free-tag:empty {
+  display: none;
 }
