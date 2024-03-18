@@ -29,16 +29,18 @@
         <mat-card-title>{{ item.toolName }}</mat-card-title>
       </mat-card-header>
       <img mat-card-image src="{{ item.toolImage }}" alt="{{ item.toolName }}">
-      
-      <mat-card-content style="max-width: 100ch; overflow: hidden;">
+
+
+      <mat-card-content>
         <p>{{ item.toolDescription }}</p>
       </mat-card-content>
-      
+
 
       <mat-card-actions>
-        <a mat-raised-button style="background-color: #212121; color: #E01C48; border-radius: 12px; " 
-        [routerLink]="['/full-tool-page', item.toolName]">View</a>
-      </mat-card-actions> 
+        <div class="free-tag">{{item.pricingModel}}</div>
+        <a mat-raised-button style="background-color: #212121; color: #E01C48; border-radius: 12px; "
+          [routerLink]="['/full-tool-page', item.toolName]">View</a>
+      </mat-card-actions>
     </mat-card>
   </ng-container>
 </div>
