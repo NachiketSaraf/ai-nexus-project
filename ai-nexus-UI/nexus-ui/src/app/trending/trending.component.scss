@@ -40,9 +40,25 @@
 
 mat-card-actions {
   color: #E01C48;
-  // background-color: black;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.free-tag {
+  border-radius: 15px;
+  font-weight: 500;
+  color: #E01C48;
+  margin-right: 103px;
+  padding: 6px 33px;
+  background-color: rgba(245, 245, 245, 0.925);
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+
+.free-tag:empty {
+  display: none;
 }
 
 a.mat-button {
@@ -104,6 +120,8 @@ mat-stroked-button {
   text-align: center;
 }
 
+
+
 /* component-name.component.css */
 
 .custom-button {
@@ -125,4 +143,13 @@ mat-stroked-button {
 .custom-button:hover {
   background-color: #0056b3;
   /* Change background color on hover */
+}
+
+mat-card-content p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+          line-clamp: 4; 
+  -webkit-box-orient: vertical;
 }
