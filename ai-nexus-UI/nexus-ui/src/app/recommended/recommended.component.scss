@@ -39,10 +39,11 @@
 
 /* Add more CSS styles for card appearance as needed */
 mat-card-actions {
+
   color: #E01C48;
-  // background-color: black;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 a.mat-button {
@@ -108,3 +109,26 @@ mat-stroked-button {
 }
 
 
+mat-card-content p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+          line-clamp: 4; 
+  -webkit-box-orient: vertical;
+}
+.free-tag {
+  border-radius: 15px;
+  font-weight: 500;
+  color: #E01C48;
+  margin-right: 115px;
+  padding: 6px 33px;
+  background-color: rgba(245, 245, 245, 0.925);
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+
+.free-tag:empty {
+  display: none;
+}
